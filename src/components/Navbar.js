@@ -1,0 +1,58 @@
+import React from 'react';
+import '../components/Navbar.css';
+// import yunkiBlackLogo from '../components/public/icons/yunki-black.svg';
+import yunkiRedLogo from '../components/public/icons/yunki-red.svg';
+import userwhite from '../components/public/icons/user-white.svg';
+import heartWhite from '../components/public/icons/heart-white.svg';
+import shoppingBagWhite from '../components/public/icons/bag-white.svg';
+import searchBlackIcon from '../components/public/icons/search-black.svg'
+import { Link } from 'react-router-dom';
+import Home from './Home';
+
+function Navbar() {
+  return (
+    <div className='navbar__section'>
+      <div className='blackLogo__container'>
+        <Link to="/">
+          <img src={yunkiRedLogo} alt='Yunki-Logo'></img>
+        </Link>
+      </div>
+      <div className='nav__links'>
+        <div className='link one'>
+          <h3>men</h3>
+        </div>
+        <div className='link one'>
+          <h3>women</h3>
+        </div>
+        <div className='link one'>
+          <h3>kids</h3>
+        </div>
+      </div>
+      <div className='search__container'>
+        <input type="search"></input>
+        <button className='search__btn'>
+          <img alt='' src={searchBlackIcon}></img>
+        </button>
+      </div>
+      <div className='navChildren__container'>
+        <div className='nav__icon'>
+          <img alt='' src={userwhite} className="user__icon"></img>
+        </div>
+        <div className='nav__icon'>
+          <Link to='wishlist' className='visit__link'>    
+            <img alt='' src={heartWhite} className="heart__icon"></img>
+            <span></span>
+          </Link>
+        </div>
+        <div className='nav__icon'> 
+          <Link to='checkout' className='visit__link'>
+            <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
+            <span>3</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Navbar

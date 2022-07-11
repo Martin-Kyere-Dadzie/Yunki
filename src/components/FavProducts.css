@@ -1,0 +1,111 @@
+@font-face {
+    font-family: centuryGothic;
+    src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
+  }
+  @font-face {
+    font-family: centuryGothicBold;
+    src: url(../components/public/fonts/century-gothic/GOTHICB.TTF);
+  }
+
+  :root{
+    --nav-color: #0f0f0f;
+    --yunki-color: #F40802;
+    --light-gray: #f1f1f1;
+    --dark-gray: #d9d9d9;
+   }
+
+  .favProduct__container{
+    width: 22vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rebeccapurple; */
+  }
+
+  .favProduct__container .favproduct__imageIcon{
+    width: 93%;
+    height: 58%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-gray);
+    object-fit: contain;
+}
+
+.favproduct__imageIcon img{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+  }
+
+  .favproduct__imageIcon .heartIcon__container{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-bottom: 12%;
+    margin-left: 12%;
+    background-color: white;
+  }
+
+  .heartIcon__container:hover{
+    background-color: var(--yunki-color);
+    transition: 1s ease all;
+  }
+
+  .heartIcon__container img{
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50px; */
+    /* background-color: var(yu); */
+}
+
+  .favProduct__container .favProduct__textContainer {
+    width: 93%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: olivedrab; */
+  }
+
+  .favProduct__textContainer h3{
+    font-family: centuryGothicBold;
+    font-size: 1rem;
+  }
+  .favProduct__textContainer p{
+    /* font-family: centuryGothic; */
+    font-size: .9rem;
+  }
+
+  .favProduct__container .addToBag__section{
+    width: 40%;
+    height: 7%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--nav-color);
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: .65rem;
+    cursor: pointer;
+  }
+
+  .addToBag__section:hover{
+    background-color: var(--yunki-color);
+    transition: .7s ease all;
+  }
+
+  .addToBag__section img{
+    width: 12%;
+  }
+

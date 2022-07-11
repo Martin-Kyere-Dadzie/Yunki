@@ -1,0 +1,244 @@
+@font-face {
+    font-family: centuryGothic;
+    src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
+  }
+  @font-face {
+    font-family: centuryGothicBold;
+    src: url(../components/public/fonts/century-gothic/GOTHICB.TTF);
+  }
+
+  :root{
+    --nav-color: #0f0f0f;
+    --yunki-color: #F40802;
+    --light-gray: #f1f1f1;
+    --dark-gray: #d9d9d9;
+   }
+  
+  *{
+    font-family: centuryGothic;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+  }
+
+  .Home__sreen{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .Home__section{
+    width: 100vw;
+    height: 92vh;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Home__section .text__container {
+    width: 40%;
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: rebeccapurple; */
+    margin: 0 70px;
+  }
+
+  .text__container h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    width: 100%;
+    line-height: 4.4rem;
+    font-family: centuryGothicBold;
+    font-weight: bolder;
+  }
+
+  .text__container span{
+    font-family: centuryGothic;
+    font-weight: lighter;
+  }
+
+  /* .text__container .tittle__text span{
+    border-bottom: 2px solid #F40802;
+  } */
+
+  .text__container h3 {
+    font-size: 1rem;
+    font-family: centuryGothicBold;
+    margin-bottom: 10%;
+}
+
+.text__container .home__btn{
+    width: 10vw;
+    height: 10%;
+    background-color: var(--yunki-color);
+    font-family: centuryGothicBold;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  .Home__section .banner__container {
+    height: 80%;
+    width: 53%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    margin: 0 80px 0 0;
+    border: 1px solid var(--nav-color);
+  }
+
+  .banner__container .angle__icon{
+    width: 35px;
+    height: 35px;
+    /* height: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-color);
+    /* margin: 20px; */
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .angle__icon:hover{
+    background-color: var(--yunki-color);
+    transition: .7s ease all;
+  }
+  
+  .angle__icon img{
+    width: 70%;
+    /* background-color: saddlebrown; */
+  }
+
+  .banner__container .left__angle{
+    margin-left: 20px;
+  }
+
+  .banner__container .right__angle{
+    margin-right: 20px;
+  }
+
+
+  .banner__container .banner__image{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: magenta; */
+    object-fit: contain;
+    margin-right: 6%;
+  }
+  
+  
+  .banner__image img{
+    width: 100%;
+    /* opacity: 0; */
+  }
+  
+  .banner__container .slide{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 20px;
+    height: 20px; */
+    object-fit: contain;
+    /* background-color: saddlebrown; */
+    transition: all 2s ease;
+  }
+
+.banner__container .current {
+    /* background-color: rgb(143, 179, 27); */
+    /* width: 2%; */
+    height: 5%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home__screen .top__favorite {
+  width: 100vw;
+  height: 17vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.top__favorite h1{
+  font-family: centuryGothicBold;
+  font-size: 3rem;
+}
+
+.top__favorite .favLinks__btn {
+  width: 60%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #caff0c; */
+  margin-left: 21%;
+}
+
+.favLinks__btn .fav__links{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .7rem;
+  color: rgb(183, 183, 183);
+}
+
+.fav__links h3:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.favLinks__btn .fav__btns{
+  width: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.fav__btns .fav__btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--dark-gray);
+  object-fit: contain;
+}
+
+.fav__btn img{
+  width: 30%;
+}
+
+.Home__screen .topFav__section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topFav__section .topFav__container{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
