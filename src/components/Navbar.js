@@ -19,13 +19,13 @@ function Navbar() {
       </div>
       <div className='nav__links'>
         <div className='link one'>
-          <h3>men</h3>
+          <h3 className='men__section'>men</h3>
         </div>
         <div className='link one'>
-          <h3>women</h3>
+          <h3 className='women__section'>women</h3>
         </div>
         <div className='link one'>
-          <h3>kids</h3>
+          <h3 className='Kinds__section'>kids</h3>
         </div>
       </div>
       <div className='search__container'>

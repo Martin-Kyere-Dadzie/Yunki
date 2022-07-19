@@ -69,20 +69,40 @@
     justify-content: center;
     color: white;
     /* background-color: aqua; */
-  }
-  
-  .link::after {
-    content: "";
-    width: 10px !important;
-    height: 3%;
-    background-color: blue;
+    
   }
   
   .nav__links h3 {
+    /* width: 50%; */
     font-family: centuryGothicBold;
     font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
+    /* background-color: fuchsia; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav__links h3:hover {
+    color: var(--yunki-color);
+    transition: 1s ease all;
+  }
+
+  .nav__links h3::after {
+    content: "";
+    width: 2% !important;
+    height: 2%;
+    background-color: #ffffff;
+    position: absolute;
+    display: none;
+    margin-top: 25px;
+  }
+
+  .nav__links h3:hover::after {
+    transition: 2s ease all;
+    display: flex;
   }
 
   .navbar__section .search__container{
