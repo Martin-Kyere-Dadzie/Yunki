@@ -6,15 +6,19 @@ import rightAngleBlackIcon from '../components/public/icons/right-angle-black.sv
 import { useState, useEffect } from 'react';
 import { sliderData } from '../components/SliderData'
 import FavProducts from './FavProducts'
-import bagWhite from './public/icons/bag-white.svg';
-import heartBlack from './public/icons/heart.svg';
-import blackBackPack from '../components/public/images/628ce44ea2de3236de2694f4_Google.jpg';
+// import bagWhite from './public/icons/bag-white.svg';
+// import heartBlack from './public/icons/heart.svg';
+// import blackBackPack from '../components/public/images/628ce44ea2de3236de2694f4_Google.jpg';
 import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
 import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
 import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
 import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
 
+
 function Home() {
+
+
+    // banner carousel section
     const [currentSlide, setCurrentSlide] = useState(0);
     const slideLength = sliderData.length;
 
@@ -30,6 +34,7 @@ function Home() {
         setCurrentSlide(currentSlide === 0 ? slideLength -1 : currentSlide - 1)
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const autoSlide = () => {
         slideInterval = setInterval(nextSlide, intervalTime)
     }
@@ -43,7 +48,18 @@ function Home() {
             autoSlide()
         }
         return () => clearInterval(slideInterval) 
-    }, [currentSlide])
+    }, [autoScroll, autoSlide, currentSlide, slideInterval])
+    // banner carousel section ends
+    
+
+
+    // redux section starts
+    // const mapStateToProps = (state) => {
+    //     return{
+    //         products: state.shop.products,
+    //     }
+    // }
+
 
   return (
     <div className='Home__screen'>
@@ -109,4 +125,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

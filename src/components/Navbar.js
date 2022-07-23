@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import '../components/Navbar.css';
 // import yunkiBlackLogo from '../components/public/icons/yunki-black.svg';
@@ -7,9 +8,16 @@ import heartWhite from '../components/public/icons/heart-white.svg';
 import shoppingBagWhite from '../components/public/icons/bag-white.svg';
 import searchBlackIcon from '../components/public/icons/search-black.svg'
 import { Link } from 'react-router-dom';
-import Home from './Home';
+// import Home from './Home';
+// import FavProducts from './FavProducts';
+
+import { useSelector } from 'react-redux';
+// import index from './redux/index';
 
 function Navbar() {
+
+  const counter = useSelector((state) => state.counter);
+
   return (
     <div className='navbar__section'>
       <div className='blackLogo__container'>
@@ -47,7 +55,7 @@ function Navbar() {
         <div className='nav__icon'> 
           <Link to='checkout' className='visit__link'>
             <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
-            <span>3</span>
+            <span>{ counter }</span>
           </Link>
         </div>
       </div>

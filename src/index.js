@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { StateProvider } from './components/StateProvider';
-import Reducer, { initialState } from './components/Reducer';
+// import { StateProvider } from './components/StateProvider';
+// import Reducer, { initialState } from './components/Reducer';
 import { Provider } from 'react-redux';
-import store from './components/redux/store';
+import store from './components/redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
       <App />
-    <StateProvider initialState={initialState} reducer={Reducer}>
-    </StateProvider>
+    </Provider>
   </React.StrictMode>
 );
 

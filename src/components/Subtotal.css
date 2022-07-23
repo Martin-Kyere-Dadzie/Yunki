@@ -58,6 +58,7 @@
     color: white;
     /* margin-bottom: 20px; */
     font-family: centuryGothicBold;
+    cursor: pointer;
    }
 
    .subtotal__container p{
