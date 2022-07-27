@@ -6,8 +6,11 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout';
 import WishList from './components/WishList';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const bagItemList = useSelector((state) => state.bag.itemsList);
+  console.log(bagItemList);
   return (
     <BrowserRouter>
       <div className="App">

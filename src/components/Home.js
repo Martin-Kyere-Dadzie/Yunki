@@ -6,14 +6,10 @@ import rightAngleBlackIcon from '../components/public/icons/right-angle-black.sv
 import { useState, useEffect } from 'react';
 import { sliderData } from '../components/SliderData'
 import FavProducts from './FavProducts'
-// import bagWhite from './public/icons/bag-white.svg';
-// import heartBlack from './public/icons/heart.svg';
-// import blackBackPack from '../components/public/images/628ce44ea2de3236de2694f4_Google.jpg';
 import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
 import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
 import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
 import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
-
 
 function Home() {
 
@@ -54,11 +50,6 @@ function Home() {
 
 
     // redux section starts
-    // const mapStateToProps = (state) => {
-    //     return{
-    //         products: state.shop.products,
-    //     }
-    // }
 
 
   return (
@@ -115,10 +106,10 @@ function Home() {
         </div>
         <div className='topFav__section'>
             <div className='topFav__container'>
-                <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors="3" price="120" />
-                <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors="2" price="350" />
-                <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors="3" price="150" />
-                <FavProducts image={brownBag} name="back pack" title="leather back pack" colors="3" price="320" />
+                <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors={3} price={120} id={1} />
+            <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
+                <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors={3} price={150} id={3}/>
+                <FavProducts image={brownBag} name="back pack" title="leather back pack" colors={3} price={320} id={4} />
             </div>
         </div>
     </div>

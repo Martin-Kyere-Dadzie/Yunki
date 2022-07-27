@@ -16,7 +16,7 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
 
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector(state => state.bag.totalQuantity);
 
   return (
     <div className='navbar__section'>
