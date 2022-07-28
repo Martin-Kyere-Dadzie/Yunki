@@ -133,6 +133,9 @@
     background-color: var(--dark-gray);
     border: none;
     border-radius: 20px 0 0 20px;
+    text-align: center;
+    font-family: centuryGothic;
+    font-weight: bolder;
   }
 
   .navbar__section .navChildren__container {

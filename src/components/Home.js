@@ -10,6 +10,7 @@ import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 
 import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
 import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
 import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
+import ShortcutLinks from './ShortcutLinks';
 
 function Home() {
 
@@ -107,13 +108,22 @@ function Home() {
         <div className='topFav__section'>
             <div className='topFav__container'>
                 <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors={3} price={120} id={1} />
-            <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
+                <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
+                <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors={3} price={150} id={3}/>
+                <FavProducts image={brownBag} name="back pack" title="leather back pack" colors={3} price={320} id={4} />
+            </div>
+            <div className='topFav__container'>
+                <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors={3} price={120} id={1} />
+                <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
                 <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors={3} price={150} id={3}/>
                 <FavProducts image={brownBag} name="back pack" title="leather back pack" colors={3} price={320} id={4} />
             </div>
         </div>
+        <div className='ShortcutLinks__section'>
+            <ShortcutLinks />
+        </div>
     </div>
-  )
+)
 }
 
 export default Home;

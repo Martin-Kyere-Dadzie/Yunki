@@ -3,6 +3,7 @@ import React from 'react';
 import '../components/Navbar.css';
 // import yunkiBlackLogo from '../components/public/icons/yunki-black.svg';
 import yunkiRedLogo from '../components/public/icons/yunki-red.svg';
+import yunkiWhiteLogo from './public/icons/yunki-white.svg';
 import userwhite from '../components/public/icons/user-white.svg';
 import heartWhite from '../components/public/icons/heart-white.svg';
 import shoppingBagWhite from '../components/public/icons/bag-white.svg';

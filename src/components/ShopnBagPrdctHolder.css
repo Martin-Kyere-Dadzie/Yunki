@@ -97,8 +97,8 @@
   }
 
   .checkoutHolder__container .trashCan__section{
-    width: 50px;
-    height: 50px;
+    width: 40%;
+    height: 7%;
     border-radius: 50px;
     border: none;
     background-color: var(--nav-color);
@@ -107,8 +107,11 @@
     align-items: center;
     justify-content: space-evenly;
     color: white;
-    font-size: .65rem;
     cursor: pointer;
+  }
+  
+  .trashCan__section h4{
+    font-size: .85rem;
   }
 
   .trashCan__section:hover{
@@ -117,6 +120,6 @@
   }
 
   .trashCan__section img{
-    width: 37%;
+    width: 13%;
   }
 

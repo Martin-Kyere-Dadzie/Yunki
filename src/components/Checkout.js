@@ -9,7 +9,8 @@ import { useSelector } from 'react-redux';
 
 function Checkout() {
   const bagItems = useSelector(state => state.bag.itemsList);
-  
+  console.log(bagItems);
+
   return (
     <div className='checkout__container'>
       <div className='checkout__left'>
@@ -20,11 +21,12 @@ function Checkout() {
               {bagItems.map(item => (               
                 <li key={item.id}>
                   <CheckoutHolder
+                  id={item.id}
                   image={item.image} 
                   name={item.name} 
                   title={item.title} 
                   colors={item.color} 
-                  price={item.price}
+                  price={item.totalPrice}
                   quantity={item.quantity} />
                 </li>
               ))}

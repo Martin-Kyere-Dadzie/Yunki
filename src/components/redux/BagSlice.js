@@ -12,7 +12,8 @@ const bagSlice = createSlice({
             const newItem = action.payload;
             console.log(newItem);
             // first check if the item is already available.
-            const existingItem = state.itemsList.find((item) => item.id === newItem.id)
+            const existingItem = state.itemsList.find((item) => item.id === newItem.id);
+            console.log(existingItem);
 
             if (existingItem) {
                 existingItem.quantity++;
@@ -41,7 +42,7 @@ const bagSlice = createSlice({
                 state.itemsList = state.itemsList.filter(item => item.id !==id);
             }else{
                 existingItem.quantity--;
-                existingItem.totalPrice -= existingItem.price;
+                existingItem.totalPrice += existingItem.price;
             }
         },
         setShowBag(state) {

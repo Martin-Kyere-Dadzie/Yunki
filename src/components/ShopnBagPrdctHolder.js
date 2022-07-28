@@ -1,6 +1,6 @@
 import React from 'react'
 import './ShopnBagPrdctHolder.css'
-import heartBlack from './public/icons/heart.svg'
+// import heartBlack from './public/icons/heart.svg'
 import trashCan from './public/icons/trash.svg';
 import angleDown from './public/icons/angle-down.svg'
 import angleUp from './public/icons/angle-up.svg'
@@ -21,7 +21,7 @@ function CheckoutHolder({image, name, title, colors, price, quantity, id }) {
     }
 
     const decrementBagItem = () => {
-
+        dispatch(bagActions.removeFromBag(id))
     }
 
 return (
@@ -45,7 +45,8 @@ return (
             <h5 className='checkoutProduct__color'>colors: {colors}</h5>
             <h3 className='checkoutProduct__price'>{price} GHS</h3>
         </div>
-        <button className='trashCan__section'>
+        <button className='trashCan__section' onClick={decrementBagItem}>
+            <h4>Delete</h4>
             <img alt='' src={trashCan} className="bag__icon"></img>
         </button>
     </div>
