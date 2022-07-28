@@ -47,13 +47,8 @@ function Home() {
         return () => clearInterval(slideInterval) 
     }, [autoScroll, autoSlide, currentSlide, slideInterval])
     // banner carousel section ends
-    
 
-
-    // redux section starts
-
-
-  return (
+return (
     <div className='Home__screen'>
         <div className='Home__section'>
             <div className='text__container'>
@@ -70,7 +65,6 @@ function Home() {
                     <img alt='' src={leftAnglewhiteIcon}></img>
                 </div>
                 <div className='banner__image'>
-                    {/* <img alt='' src={sweatTop}></img> */}
                     {sliderData.map((slide, index) => {
                     return (
                         <div className={index === currentSlide ? "slide current" : "slide"} key={index}>

@@ -22,7 +22,7 @@ function FavProducts({image, name, title, colors, price, id, }) {
         }))
     }
 
-  return (
+return (
     <div className='favProduct__container'>
         <div className='favproduct__imageIcon'>
             <img alt='' src={image} className="product"></img>
