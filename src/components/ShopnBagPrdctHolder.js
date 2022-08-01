@@ -24,6 +24,10 @@ function CheckoutHolder({image, name, title, colors, price, quantity, id }) {
         dispatch(bagActions.removeFromBag(id))
     }
 
+    const deleteProduct = () => {
+        dispatch(bagActions.deleteProduct(id))
+    }
+
 return (
     
     <div className='checkoutHolder__container'>
@@ -45,7 +49,7 @@ return (
             <h5 className='checkoutProduct__color'>colors: {colors}</h5>
             <h3 className='checkoutProduct__price'>{price} GHS</h3>
         </div>
-        <button className='trashCan__section' onClick={decrementBagItem}>
+        <button className='trashCan__section' onClick={deleteProduct}>
             <h4>Delete</h4>
             <img alt='' src={trashCan} className="bag__icon"></img>
         </button>

@@ -12,9 +12,9 @@
     --yunki-color: #F40802;
     --light-gray: #f1f1f1;
     --dark-gray: #d9d9d9;
-   }
+  }
 
-   .subtotal__container{
+  .subtotal__container{
     width: 85%;
     height: 15vh;
     display: flex;
@@ -29,9 +29,9 @@
     position: relative;
     left: 60px;
 
-   }
-   
-   .subtotal__gift{
+  }
+  
+  .subtotal__gift{
     width: 64%;
     display: flex;
     align-items: center;
@@ -39,14 +39,14 @@
     font-family: centuryGothic;
     font-weight: bold;
     /* background-color: rebeccapurple; */
-   }
+  }
 
-   .subtotal__container .subtotal__gift input{
+  .subtotal__container .subtotal__gift input{
     width: 12px;
     height: 12px;
-   }
+  }
 
-   .subtotal__container .checkout__btn{
+  .subtotal__container .checkout__btn{
     width: 80%;
     height: 32%;
     display: flex;
@@ -59,14 +59,28 @@
     /* margin-bottom: 20px; */
     font-family: centuryGothicBold;
     cursor: pointer;
-   }
+  }
 
-   .subtotal__container p{
+  .subtotal__container p{
     font-family: centuryGothicBold;
-   }
+    font-weight: bolder;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 47%;
+  }
 
-   .checkout__btn:hover{
+  .subtotal__container p .price__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    /* background-color: #0f0f0f; */
+  }
+
+  .checkout__btn:hover{
     background-color: var(--yunki-color);
     transition: 1s ease all;
-   }
+  }
 

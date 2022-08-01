@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 function Checkout() {
   const bagItems = useSelector(state => state.bag.itemsList);
   console.log(bagItems);
-
   return (
     <div className='checkout__container'>
       <div className='checkout__left'>
@@ -27,6 +26,7 @@ function Checkout() {
                   title={item.title} 
                   colors={item.color} 
                   price={item.totalPrice}
+                  totalPrice={item.totalPrice}
                   quantity={item.quantity} />
                 </li>
               ))}

@@ -1,16 +1,24 @@
 import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
+import bagSlice from './redux/BagSlice';
+import { useSelector } from 'react-redux';
 
 function Subtotal() {
-  return (
+    let subtotalItemPrice = 0;
+    const itemsList = useSelector(state => state.bag.itemsList);
+
+    itemsList.forEach ((item) => {
+        subtotalItemPrice += item.totalPrice
+    })
+    return (
     <div className='subtotal__container'>
         <CurrencyFormat 
             renderText={(value) => (
                 <>
                     <p>
-                        Subtotal (0 items):
-                        <strong>0</strong>
+                        Subtotal:
+                        <strong className='price__container'>{subtotalItemPrice}GHS</strong>
                     </p>
                     <small className='subtotal__gift'>
                         <input type="checkbox" />This order contains a gift

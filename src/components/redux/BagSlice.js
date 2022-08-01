@@ -7,6 +7,7 @@ const bagSlice = createSlice({
         totalQuantity: null,
         showBag: false
     },
+
     reducers: {
         addToBag(state, action) {
             const newItem = action.payload;
@@ -14,10 +15,9 @@ const bagSlice = createSlice({
             // first check if the item is already available.
             const existingItem = state.itemsList.find((item) => item.id === newItem.id);
             console.log(existingItem);
-
             if (existingItem) {
                 existingItem.quantity++;
-                existingItem.totalPrice += newItem.price;
+                existingItem.totalPrice += existingItem.price;
             } else {
                 state.itemsList.push({
                     id: newItem.id,
@@ -31,20 +31,28 @@ const bagSlice = createSlice({
                 });
                 state.totalQuantity++;
             }
-
         },
+
         removeFromBag(state, action) {
             const id = action.payload;
-
             const existingItem = state.itemsList.find(item => item.id === id);
+
             
             if(existingItem.quantity === 1) {
                 state.itemsList = state.itemsList.filter(item => item.id !==id);
+                state.totalQuantity --;
             }else{
                 existingItem.quantity--;
-                existingItem.totalPrice += existingItem.price;
+                existingItem.totalPrice -= existingItem.price;
             }
         },
+
+        deleteProduct(state, action) {
+            const id = action.payload;
+            const itemToDelete = state.itemsList.find(item => item.id === id);
+            itemToDelete.remove()
+        },
+
         setShowBag(state) {
             state.showBag = true;
         },
