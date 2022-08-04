@@ -28,7 +28,7 @@ return (
         <div className='favproduct__imageIcon'>
             <img alt='' src={image} className="product"></img>
             <div className='heartIcon__container'>
-                <img alt='' src={heartRed}></img>
+                <img alt='' src={heartRed} className='heart__icon'></img>
             </div>
         </div>
         <div className='favProduct__textContainer'>
