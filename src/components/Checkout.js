@@ -4,10 +4,17 @@ import Subtotal from './Subtotal'
 import FavProducts from './FavProducts'
 import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
 import CheckoutHolder from './ShopnBagPrdctHolder';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import bagActions from './redux/BagSlice';
 
 
 function Checkout() {
+
+const dispatch = useDispatch();
+const clearBag = () => {
+  dispatch(bagActions.clearShoppingBag())
+}
+
   const bagItems = useSelector(state => state.bag.itemsList);
   console.log(bagItems);
   return (
@@ -31,6 +38,7 @@ function Checkout() {
                 </li>
               ))}
           </ul>
+          <div onClick={clearBag}>clear Shopping bag</div>
         </div>
       </div>
       <div className='checkout__right'>

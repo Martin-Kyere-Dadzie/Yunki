@@ -5,15 +5,22 @@ import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png
 import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
 import tops from '../components/public/images/shaves.png';
 
+import mensFashion from './public/images/interview-2211354_1280.jpg';
+import sneaker from './public/images/sneaker.webp'
+import electronics from './public/images/altumcode-Ui3zMjpMrmM-unsplash.jpg';
+import bracelets from './public/images/37433_SILVV5.webp'
+import ladiesFasion from './public/images/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg';
+
+
 export const sliderData = [
     {
-        Image: blackBackPack
+        Image: mensFashion
     },
     {
-        Image: swimCostume
+        Image: bracelets
     },
     {
-        Image: watch
+        Image: ladiesFasion
     },
     {
         Image: sweatTop

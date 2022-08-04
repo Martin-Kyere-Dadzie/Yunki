@@ -6,6 +6,7 @@ import heartRedFill from './public/icons/heart-red-fill.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import { actions } from './redux'
 import { bagActions } from './redux/BagSlice';
+import cediIcon from './public/icons/cedi-icon.svg';
 // import store from './redux/index';
 
 function FavProducts({image, name, title, colors, price, id, }) {
@@ -34,7 +35,9 @@ return (
             <h3 className='product__name'>{name}</h3>
             <p className='product__description'>{title}</p>
             <h5 className='product__color'>colors: {colors}</h5>
-            <h3 className='product__price'>{price} GHS</h3>
+            <h3 className='product__price'>
+                <img alt='' src={cediIcon}></img>{price} GHS
+            </h3>
         </div>
         <button className='addToBag__section' onClick={addToBag}>
             <h4>Add To Bag</h4>

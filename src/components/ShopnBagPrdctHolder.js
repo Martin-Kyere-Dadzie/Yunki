@@ -6,6 +6,7 @@ import angleDown from './public/icons/angle-down.svg'
 import angleUp from './public/icons/angle-up.svg'
 import { useDispatch } from 'react-redux';
 import {bagActions} from './redux/BagSlice';
+import cediIcon from './public/icons/cedi-icon.svg';
 
 function CheckoutHolder({image, name, title, colors, price, quantity, id }) {
 
@@ -47,14 +48,16 @@ return (
             <h3 className='checkoutProduct__name'>{name}</h3>
             <p className='checkoutProduct__description'>{title}</p>
             <h5 className='checkoutProduct__color'>colors: {colors}</h5>
-            <h3 className='checkoutProduct__price'>{price} GHS</h3>
+            <h3 className='checkoutProduct__price'>
+                <img alt='' src={cediIcon}></img>{price} GHS
+            </h3>
         </div>
         <button className='trashCan__section' onClick={deleteProduct}>
-            <h4>Delete</h4>
+            <h4>Remove</h4>
             <img alt='' src={trashCan} className="bag__icon"></img>
         </button>
     </div>
-)
+    )
 }
 
 export default CheckoutHolder;

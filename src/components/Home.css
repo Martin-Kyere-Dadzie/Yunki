@@ -10,7 +10,7 @@
   :root{
     --nav-color: #0f0f0f;
     --yunki-color: #F40802;
-    --light-gray: #f1f1f1;
+    --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
    }
   
@@ -90,12 +90,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
+    background-color: red;
     margin: 0 80px 0 0;
     border: 1px solid var(--nav-color);
+    overflow: hidden;
   }
 
   .banner__container .angle__icon{
+    position: absolute;
     width: 35px;
     height: 35px;
     /* height: 5%; */
@@ -115,32 +117,35 @@
   }
   
   .angle__icon img{
-    width: 70%;
+    width: 100%;
+    height: 100%;
     /* background-color: saddlebrown; */
   }
 
   .banner__container .left__angle{
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .banner__container .right__angle{
-    margin-right: 20px;
+    margin-left: 500px;
   }
 
 
   .banner__container .banner__image{
-    width: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: magenta; */
-    object-fit: contain;
-    margin-right: 6%;
+    background-color: magenta;
+    object-fit: cover;
+    /* margin-right: 6%; */
   }
   
   
   .banner__image img{
     width: 100%;
+    height: 100%;
     /* opacity: 0; */
   }
   
@@ -152,8 +157,14 @@
     /* width: 20px;
     height: 20px; */
     object-fit: contain;
-    /* background-color: saddlebrown; */
+    background-color: saddlebrown;
     transition: all 2s ease;
+    object-fit: cover;
+  }
+
+  .slide img{
+    width: 100%;
+    height: 100%;
   }
 
 .banner__container .current {

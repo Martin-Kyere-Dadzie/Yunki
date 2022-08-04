@@ -64,9 +64,6 @@ return (
                 <button className='home__btn'>Shop</button>
             </div>
             <div className='banner__container'>
-                <div className='angle__icon left__angle' onClick={prevSlide} >
-                    <img alt='' src={leftAnglewhiteIcon}></img>
-                </div>
                 <div className='banner__image'>
                     {sliderData.map((slide, index) => {
                     return (
@@ -77,6 +74,9 @@ return (
                         </div>
                         )
                     })}
+                </div>
+                <div className='angle__icon left__angle' onClick={prevSlide} >
+                    <img alt='' src={leftAnglewhiteIcon}></img>
                 </div>
                 <div className='angle__icon right__angle' onClick={nextSlide}>
                     <img alt='' src={rightAnglewhiteIcon} ></img>
@@ -102,6 +102,7 @@ return (
                 </div>
             </div>
         </div>
+        
         <div className='topFav__section'>
             <div className='topFav__container'>
                 <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors={3} price={120} id={1} />
@@ -115,9 +116,6 @@ return (
                 <FavProducts image={petLeash} name="pet leash" title="pet leash for pets" colors={1} price={85} id={7}/>
                 <FavProducts image={dosHambres} name="dos hambres" title="dos hambres alcoholic beverage" colors={1} price={220} id={8} />
             </div>
-        </div>
-        <div className='ShortcutLinks__section'>
-            <ShortcutLinks />
         </div>
     </div>
 )

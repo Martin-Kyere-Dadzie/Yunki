@@ -10,7 +10,7 @@
   :root{
     --nav-color: #0f0f0f;
     --yunki-color: #F40802;
-    --light-gray: #f1f1f1;
+    --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
   }
 
@@ -26,8 +26,8 @@
     border-radius: 10px;
     box-shadow: .3px .3px 9px 0px rgba(0, 0, 0, .5);
     border: 1px solid black;
-    position: relative;
-    left: 60px;
+    /* position: relative; */
+    /* left: 60px; */
 
   }
   
@@ -64,19 +64,26 @@
   .subtotal__container p{
     font-family: centuryGothicBold;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 47%;
+    width: 70%;
+    /* background-color: #F40802; */
   }
 
   .subtotal__container p .price__container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 25%;
-    /* background-color: #0f0f0f; */
+    justify-content: center;
+    width: 20%;
+    /* background-color: #01eeff; */
+  }
+
+  .price__container img{
+    position: relative;
+    top: 2px;
+    width: 19%;
   }
 
   .checkout__btn:hover{

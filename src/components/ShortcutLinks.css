@@ -1,0 +1,143 @@
+@font-face {
+    font-family: centuryGothic;
+    src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
+}
+@font-face {
+    font-family: centuryGothicBold;
+    src: url(../components/public/fonts/century-gothic/GOTHICB.TTF);
+}
+
+:root{
+    --nav-color: #0f0f0f;
+    --yunki-color: #F40802;
+    --light-gray: #F7F7F7;
+    --dark-gray: #d9d9d9;
+}
+
+.shortcutlinks__section{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #0f0f0f; */
+}
+
+.shortcutlinks__section .first__row, .second__row{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border: 10px solid white;
+    justify-content: space-between;
+    /* background-color: saddlebrown; */
+}
+
+.first__row .first__holder, .second__row .second__holder{
+    width: 27%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    background-color: darkblue;
+}
+
+.first__row .image__three{
+    width: 44.4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image__three .overlay{
+    height: 40.5%;
+    width: 44.2%;
+    background-color: #0101014b;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+}
+
+.image__one .overlay{
+    height: 40.5%;
+    width: 26.8%;
+    background-color: #0101014b;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+}
+
+.image__two .overlay{
+    height: 40.5%;
+    width: 26.8%;
+    background-color: #0101014b;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay:hover{
+    background-color: #01010161;
+}
+
+.overlay .overlay__btn{
+    background-color: var(--nav-color);
+    color: white;
+    /* position: absolute; */
+
+}
+
+.overlay h5{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1rem;
+    z-index: 5;
+}
+
+.first__holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second__row .image__one{
+    width: 44.4%;
+}
+.second__row{
+    border-top: none;
+}
+
+.second__row .image__one .overlay{
+    height: 42%;
+    width: 44.2%;
+    background-color: #0101014b;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    cursor: pointer;
+}
+
+.second__holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second__holder .overlay:hover{
+    background-color: #01010161;
+}

@@ -10,7 +10,7 @@
   :root{
     --nav-color: #0f0f0f;
     --yunki-color: #F40802;
-    --light-gray: #f1f1f1;
+    --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
    }
 
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-gray);
+    background-color: var(--light-gray);
     object-fit: contain;
 }
 
@@ -42,8 +42,9 @@
   }
 
   .checkoutHolder__imageIcon .itemIncrement__container{
-    width: 30px;
+    width: 26px;
     height: 50px;
+    border: 1px solid var(--nav-color);
     border-radius: 55px;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,9 @@
     position: absolute;
     margin-bottom: 12%;
     margin-left: 12%;
+    font-size: 1rem;
+    font-family: centuryGothicBold;
+    font-weight: bolder;
     background-color: white;
   }
 
@@ -87,11 +91,18 @@
     /* background-color: olivedrab; */
   }
 
-  .checkoutHolder__textContainer h3{
+  .checkoutHolder__textContainer > h3{
     font-family: centuryGothicBold;
     font-size: 1rem;
   }
-  .checkoutHolder__textContainer p{
+
+  .checkoutHolder__textContainer > h3 img{
+    position: relative;
+    top: 1px;
+    width: 2.7%;
+  }
+
+  .checkoutHolder__textContainer > p{
     /* font-family: centuryGothic; */
     font-size: .9rem;
   }

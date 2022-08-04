@@ -49,10 +49,14 @@ const bagSlice = createSlice({
 
         deleteProduct(state, action) {
             const id = action.payload;
-            const itemToDelete = state.itemsList.find(item => item.id === id);
-            itemToDelete.remove()
+            state.itemsList = state.itemsList.filter(item => item.id !==id);
+            state.totalQuantity --;
         },
-
+        
+        clearShoppingBag(state) {
+            state.itemsList = false;
+        },
+        
         setShowBag(state) {
             state.showBag = true;
         },
