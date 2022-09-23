@@ -15,12 +15,14 @@ function Login () {
             </div>
             <form className='Login__form'>
                 <label>Name:</label>
-                <input type={'text'} placeholder='Enter User Name.'></input>
+                <input type={'text'} placeholder='Enter User Name.' required></input>
                 <label>Email Address:</label>
-                <input type={'text'} placeholder='Enter User Email.'></input>
+                <input type={'text'} placeholder='Enter User Email.' required></input>
                 <label>Password:</label>
-                <input type={'password'} placeholder='Enter User Password.'></input>
+                <input type={'password'} placeholder='Enter User Password.' required></input>
+                <button type='submit' className='form__btn'>Sign In</button>
             </form>
+            <div className='login__footer'></div>
         </div>
     </div>
   )

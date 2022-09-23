@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
     font-family: centuryGothic;
     src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
   }
@@ -24,7 +24,7 @@
    }
 
    .Login__Section .Login__Contents{
-    width: 25%;
+    width: 23%;
     height: 74%;
     /* background-color: #0f0f0f; */
     display: flex;
@@ -58,12 +58,12 @@
 
    .Login__Text h1{
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: centuryGothicBold;
    }
 
    .Login__Text h3{
-    font-size: .98rem;
+    font-size: .88rem;
     font-family: centuryGothicBold;
     color: gray;
     height: 1%;
@@ -71,14 +71,38 @@
 
    .Login__Contents form{
     width: 80%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
    }
+
+   form label{
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: .85rem;
+   }
    
    form input{
-    width: 90%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 25%;
+   }
+
+   form button{
+    width: 100%;
+    height: 30%;
+    background-color: var(--nav-color);
+    color: white;
+    border: none;
+    transition: 1s ease all;
+    font-weight: bolder;
+   }
+
+   form button:hover{
+    background-color: var(--yunki-color);
    }
 
    
