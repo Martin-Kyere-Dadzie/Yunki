@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout';
 import WishList from './components/WishList';
+import Login from './components/Login';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='wishlist' element={<WishList />} />
           <Route path='checkout' element={<Checkout />} />
+          <Route path='login' element={<Login />} />
         </Routes>
       </div>
     </BrowserRouter>

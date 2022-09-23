@@ -45,7 +45,9 @@ function Navbar() {
       </div>
       <div className='navChildren__container'>
         <div className='nav__icon'>
-          <img alt='' src={userwhite} className="user__icon"></img>
+          <Link to='login' className='visit__link'>
+            <img alt='' src={userwhite} className="user__icon"></img>
+          </Link>
         </div>
         <div className='nav__icon'>
           <Link to='wishlist' className='visit__link'>    

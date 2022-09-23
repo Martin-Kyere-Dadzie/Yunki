@@ -38,7 +38,7 @@
   }
 
   .navbar__section .blackLogo__container{
-    width: 9%;
+    width: 7%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@
   }
 
   .search__container .search__btn{
-    width: 20%;
+    width: 9%;
     background-color: var(--dark-gray);
     border: none;
     border-radius: 0 20px 20px 0;
@@ -179,7 +179,7 @@
   }
 
   .nav__icon img {
-    width: 45%;
+    width: 37%;
     cursor: pointer;
     /* background-color: blue; */
 
@@ -187,12 +187,12 @@
 
   
   .navChildren__container .user__icon{
-    width:35%;
+    width: 30%;
     /* background-color: aqua; */
   }
 
   .navChildren__container .bag__icon{
-    width: 35%;
+    width: 27%;
   }
   
 
