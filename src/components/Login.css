@@ -25,7 +25,7 @@
 
    .Login__Section .Login__Contents{
     width: 23%;
-    height: 74%;
+    height: 70%;
     /* background-color: #0f0f0f; */
     display: flex;
     flex-direction: column;
@@ -49,11 +49,13 @@
 
    .Login__Contents .Login__Text{
     width: 90%;
+    height: 9%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    /* margin-bottom: 20%; */
    }
 
    .Login__Text h1{
@@ -65,17 +67,19 @@
    .Login__Text h3{
     font-size: .88rem;
     font-family: centuryGothicBold;
-    color: gray;
+    color: #969696;
     height: 1%;
    }
 
    .Login__Contents form{
     width: 80%;
-    height: 40%;
+    height: 46%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    /* margin-bottom: 15%; */
+    background-color: blue;
    }
 
    form label{
@@ -83,17 +87,18 @@
     align-self: flex-start;
     font-weight: bold;
     font-size: .85rem;
+    margin-top: 3%;
    }
    
    form input{
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     width: 100%;
-    height: 25%;
+    height: 13%;
    }
 
    form button{
     width: 100%;
-    height: 30%;
+    height: 15%;
     background-color: var(--nav-color);
     color: white;
     border: none;
@@ -105,4 +110,25 @@
     background-color: var(--yunki-color);
    }
 
+   .Login__Contents .user__login{
+    font-size: .95rem;
+   }
+
+   .user__login >span{
+    font-weight: bolder;
+    color: rgb(49, 76, 255);
+    cursor: pointer;
+   }
+
+   .Login__Contents .login__footer{
+    width: 90%;
+    height: 10%;
+    font-size: .65rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #969696;
+    /* background: saddlebrown; */
+   }
    

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Login.css';
 import yunkiRedLogo from './public/icons/yunki-red.svg';
 
@@ -11,7 +11,7 @@ function Login () {
             </div>
             <div className='Login__Text'>
                 <h1>be the first to shop</h1>
-                <h3>Sign up for Yunki to be the first to see inspiring content, news and exclusive offers.</h3>
+                <h3>Sign in for Yunki to be the first to see inspiring content, news and exclusive offers.</h3>
             </div>
             <form className='Login__form'>
                 <label>Name:</label>
@@ -22,10 +22,13 @@ function Login () {
                 <input type={'password'} placeholder='Enter User Password.' required></input>
                 <button type='submit' className='form__btn'>Sign In</button>
             </form>
-            <div className='login__footer'></div>
+            <div className='user__login'>Already have an account? <span>Log In</span></div>
+            <div className='login__footer'>
+                <h3>By signing in, you agree to Yunki's Privacy Policy and Terms of Use.</h3>
+            </div>
         </div>
     </div>
   )
-}
+};
 
-export default Login
+export default Login;
