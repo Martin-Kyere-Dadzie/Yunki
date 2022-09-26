@@ -17,7 +17,7 @@ function Login () {
                 <label>Name:</label>
                 <input type={'text'} placeholder='Enter User Name.' required></input>
                 <label>Email Address:</label>
-                <input type={'text'} placeholder='Enter User Email.' required></input>
+                <input type={'email'} placeholder='Enter User Email.' required></input>
                 <label>Password:</label>
                 <input type={'password'} placeholder='Enter User Password.' required></input>
                 <button type='submit' className='form__btn'>Sign In</button>
