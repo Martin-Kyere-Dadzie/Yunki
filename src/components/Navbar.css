@@ -164,7 +164,7 @@
     justify-content: center;
   }
 
-  .navChildren__container .nav__icon span {
+  .navChildren__container .nav__icon strong {
     width: 15px;
     height: 15px;
     border-radius: 20px;
@@ -176,6 +176,7 @@
     font-family: centuryGothicBold;
     font-weight: bolder;
     font-size: .8rem;
+    text-decoration: none;
   }
 
   .nav__icon img {

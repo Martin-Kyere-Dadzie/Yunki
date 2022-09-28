@@ -52,13 +52,13 @@ function Navbar() {
         <div className='nav__icon'>
           <Link to='wishlist' className='visit__link'>    
             <img alt='' src={heartWhite} className="heart__icon"></img>
-            <span></span>
+            <strong></strong>
           </Link>
         </div>
         <div className='nav__icon'> 
           <Link to='checkout' className='visit__link'>
             <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
-            <span>{ counter }</span>
+            <strong>{ counter }</strong>
           </Link>
         </div>
       </div>
