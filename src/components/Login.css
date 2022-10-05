@@ -121,6 +121,10 @@
     cursor: pointer;
    }
 
+   .user__login >span:hover{
+    color: var(--yunki-color);
+   }
+
    .Login__Contents .login__footer{
     width: 90%;
     height: 10%;
