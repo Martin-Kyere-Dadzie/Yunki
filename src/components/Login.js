@@ -1,8 +1,15 @@
 import React from 'react';
 import './Login.css';
 import yunkiRedLogo from './public/icons/yunki-red.svg';
+import React, { useRef } from 'react';
+
 
 function Login () {
+
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const passwordConfirmRef = useRef();
+
   return (
     <div className="Login__Section">
         <div className='Login__Contents'>
