@@ -45,7 +45,7 @@ function Navbar() {
       </div>
       <div className='navChildren__container'>
         <div className='nav__icon'>
-          <Link to='login' className='visit__link'>
+          <Link to='signin' className='visit__link'>
             <img alt='' src={userwhite} className="user__icon"></img>
           </Link>
         </div>

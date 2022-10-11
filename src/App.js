@@ -6,7 +6,8 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout';
 import WishList from './components/WishList';
-import Login from './components/Login';
+import SignIn from './components/SignIn';
+import LogIn from './components/LogIn';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='wishlist' element={<WishList />} />
           <Route path='checkout' element={<Checkout />} />
-          <Route path='login' element={<Login />} />
+          <Route path='signin' element={<SignIn />} />
+          <Route path='login' element={<LogIn />} />
         </Routes>
       </div>
     </BrowserRouter>

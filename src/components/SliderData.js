@@ -17,7 +17,8 @@ export const sliderData = [
         Image: mensFashion
     },
     {
-        Image: bracelets
+        Image: bracelets,
+        // Text: "the quick brown fox jumps the lazy dog" 
     },
     {
         Image: ladiesFasion

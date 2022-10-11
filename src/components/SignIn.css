@@ -115,13 +115,14 @@
     font-size: .95rem;
    }
 
-   .user__login >span{
+   .user__login .User__Account{
     font-weight: bolder;
     color: rgb(49, 76, 255);
     cursor: pointer;
+    text-decoration: none;
    }
 
-   .user__login >span:hover{
+   .user__login .User__Account:hover{
     color: var(--yunki-color);
    }
 
