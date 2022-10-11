@@ -1,3 +1,6 @@
 {
-    "editor.foldingMaximumRegions": 7000
+    "editor.foldingMaximumRegions": 7000,
+    "cSpell.words": [
+        "YUNKI"
+    ]
 }

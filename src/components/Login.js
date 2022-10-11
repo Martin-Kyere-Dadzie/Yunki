@@ -1,14 +1,22 @@
 import React from 'react';
 import './Login.css';
 import yunkiRedLogo from './public/icons/yunki-red.svg';
-import React, { useRef } from 'react';
+import react, { useRef } from 'react';
+import {useAuth} from './AuthContext';
 
 
 function Login () {
 
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const passwordConfirmRef = useRef();
+    // const emailRef = useRef();
+    // const passwordRef = useRef();
+    // const passwordConfirmRef = useRef();
+    // const {signup} = useAuth();
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+
+    //     signup(emailRef.current.value, passwordRef.current.value)
+    // }
 
   return (
     <div className="Login__Section">
