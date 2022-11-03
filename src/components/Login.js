@@ -20,7 +20,7 @@ function LogIn() {
         </form>
         <div className='login-text'>
           <h3>forgot password?</h3>
-          <h2>Need an Account? <span><Link to='/signin' className='signin-link'>Sign In</Link></span></h2>
+          <h2>Need an account? <span><Link to='/signin' className='signin-link'>Sign In</Link></span></h2>
         </div>
       </div>
     </div>

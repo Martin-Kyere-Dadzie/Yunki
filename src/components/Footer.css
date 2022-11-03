@@ -31,7 +31,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    background-color: saddlebrown;
+    /* background-color: saddlebrown; */
 }
 
 .Footer__container .content{
@@ -65,8 +65,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: tomato;
+    /* background-color: tomato; */
 }
 .copyright-contents img{
     width: 15%;
+}
+.copyright-contents .copyright-text{
+    color: white;
 }

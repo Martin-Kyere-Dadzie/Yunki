@@ -26,7 +26,7 @@
 
    .Login__Section .Login__Contents{
     width: 23%;
-    height: 70%;
+    height: 73%;
     /* background-color: #0f0f0f; */
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
 
    .Login__Contents form{
     width: 80%;
-    height: 48%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
