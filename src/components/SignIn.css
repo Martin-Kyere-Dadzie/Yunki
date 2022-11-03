@@ -105,6 +105,8 @@
     transition: 1s ease all;
     font-weight: bolder;
     margin-top: 6%;
+    text-transform: uppercase;
+    font-size: .8rem;
    }
 
    form button:hover{

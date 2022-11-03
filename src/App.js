@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const bagItemList = useSelector((state) => state.bag.itemsList);
-  console.log(bagItemList);
+  // console.log(bagItemList);
   return (
     <BrowserRouter>
       <div className="App">

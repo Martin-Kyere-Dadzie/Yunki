@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignIn.css';
 import yunkiRedLogo from './public/icons/yunki-red.svg';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ function SignIn () {
                 <input type={'email'} placeholder='Enter User Email.' required></input>
                 <label>Password:</label>
                 <input type={'password'} placeholder='Enter User Password.' required></input>
-                <button type='submit' className='form__btn'>Sign In</button>
+                <button type='submit' className='form__btn'>create your yunki account</button>
             </form>
             <div className='user__login'>Already have an account? <span><Link to='login' className='User__Account'>Log In</Link></span></div>
             <div className='login__footer'>

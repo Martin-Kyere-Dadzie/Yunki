@@ -6,6 +6,7 @@ import rightAngleBlackIcon from '../components/public/icons/right-angle-black.sv
 import { useState, useEffect } from 'react';
 import { sliderData } from '../components/SliderData'
 import FavProducts from './FavProducts'
+import Footer from './Footer';
 import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
 import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
 import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
@@ -117,6 +118,8 @@ return (
                 <FavProducts image={dosHambres} name="dos hambres" title="dos hambres alcoholic beverage" colors={1} price={220} id={8} />
             </div>
         </div>
+
+        <Footer/>
     </div>
 )
 }
