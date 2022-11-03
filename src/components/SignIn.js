@@ -39,7 +39,7 @@ function SignIn () {
                 <input type={'password'} placeholder='Enter User Password.' required></input>
                 <button type='submit' className='form__btn'>create your yunki account</button>
             </form>
-            <div className='user__login'>Already have an account? <span><Link to='login' className='User__Account'>Log In</Link></span></div>
+            <div className='user__login'>Already have an account? <span><Link to='/login' className='User__Account'>Log In</Link></span></div>
             <div className='login__footer'>
                 <h3>By signing in, you agree to Yunki's Privacy Policy and Terms of Use.</h3>
             </div>

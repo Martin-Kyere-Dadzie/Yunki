@@ -19,10 +19,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='wishlist' element={<WishList />} />
-          <Route path='checkout' element={<Checkout />} />
-          <Route path='signin' element={<SignIn />} />
-          <Route path='login' element={<LogIn />} />
+          <Route path='/wishlist' element={<WishList />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/login' element={<LogIn />} />
         </Routes>
       </div>
     </BrowserRouter>
