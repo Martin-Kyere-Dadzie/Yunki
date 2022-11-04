@@ -19,7 +19,7 @@ function LogIn() {
           <button className='login-button' type='confirm'>Log In</button>
         </form>
         <div className='login-text'>
-          <h3>forgot password?</h3>
+          <h3 className='password-reset'>forgot password?</h3>
           <h2>Need an account? <span><Link to='/signin' className='signin-link'>Sign In</Link></span></h2>
         </div>
       </div>

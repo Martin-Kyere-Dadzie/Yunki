@@ -1,39 +1,42 @@
-// import { useContext, useState, useEffect } from "react";
-// import { auth, Auth } from './Firebase';
+import React from "react";
+import { useContext, useState, useEffect } from "react";
+// import { auth } from './firebase';
+import firebase from 'firebase/compat/app';
 // import signup from "./Login";
 
-// const AuthContext = React.createContext();
+const AuthContext = React.createContext();
 
-// export function useAuth() {
-//     return useContext(AuthContext)
-// }
+export function useAuth() {
+    return useContext(AuthContext)
+}
 
-// export default function AuthProvider( children ) {
+export default function AuthProvider( children ) {
+    const [ currentUser, setCurrentUser ] = useState;
+    const [loading, setLoading] = useState(true)
 
-//     const [ currentUser, setCurrentUser ] = useState;
+    const signIn = (name, email, password) => {
+        return firebase.createUserWithEmailAndPassword(name, email, password)
+    }
 
-//     const login = (email, password) => {
-//         return auth.createUserWithEmailAndPassword(email, password)
-//     }
-
-//     useEffect(() => {
-//         const unsubscribe = auth.onAuthStateChanged(user => {
-//             setCurrentUser(user)
-//         });
-//         return unsubscribe;
-//     }, [])
+    useEffect(() => {
+        const unsubscribe = firebase.onAuthStateChanged(user => {
+            setCurrentUser(user)
+            setLoading(false)
+        });
+        return unsubscribe;
+    }, [])
     
 
-//     const value = {
-//         currentUser,
-//         signup
-//     };
+    const value = {
+        currentUser,
+        signIn
+    };
 
-//     return (
-//         <div>
-//             <AuthContext.Provider value={value}>
-//                 {children}
-//             </AuthContext.Provider>
-//         </div>
-//     )
-// };
+    return (
+        // <div>
+            <AuthContext.Provider value={value}>
+                {!loading && children}
+            </AuthContext.Provider>
+        /* </div> */
+    )
+};

@@ -12,6 +12,7 @@
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
+    --darker-gray: #a4a4a4;
    }
 
   .favProduct__container{
@@ -120,6 +121,10 @@
   .addToBag__section:hover{
     background-color: var(--yunki-color);
     transition: .7s ease all;
+  }
+
+  .addToBag__section:active{
+    background-color: var(--nav-color);
   }
 
   .addToBag__section h4{

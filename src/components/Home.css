@@ -12,6 +12,7 @@
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
+    --darker-gray: #a4a4a4;
    }
   
   *{
@@ -113,6 +114,10 @@
   .angle__icon:hover{
     background-color: var(--yunki-color);
     transition: .7s ease all;
+  }
+
+  .angle__icon:active{
+    background-color: var(--nav-color);
   }
   
   .angle__icon img{

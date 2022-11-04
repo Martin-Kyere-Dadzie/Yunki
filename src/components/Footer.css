@@ -12,7 +12,7 @@
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
-    --darker-gray: #c1c1c1;
+    --darker-gray: #a4a4a4;
    }
 
 .Footer__container {
@@ -68,7 +68,7 @@
     /* background-color: tomato; */
 }
 .copyright-contents img{
-    width: 15%;
+    width: 35%;
 }
 .copyright-contents .copyright-text{
     color: white;

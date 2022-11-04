@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css';
 import FooterLink from './FooterLink';
-import yunkiRedLogo from './public/icons/yunki-red.svg';
+import yunkiRedLogo from './public/icons/yunki-white.svg';
 
 
 function Footer() {

@@ -9,6 +9,7 @@ import WishList from './components/WishList';
 import SignIn from './components/SignIn';
 import LogIn from './components/LogIn';
 import { useSelector } from 'react-redux';
+import AuthProvider from './components/AuthContext';
 
 function App() {
   const bagItemList = useSelector((state) => state.bag.itemsList);
