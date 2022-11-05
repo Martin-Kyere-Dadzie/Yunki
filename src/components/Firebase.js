@@ -1,15 +1,10 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-
-const app = firebase.initializeApp({
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_APP_MEASUREMENT_ID
-});
-
-export const auth = app.auth();
-export default app;
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyCaRXPvjOW4OfzuuXxtCZ8FwwG9ydw-1Nk",
+    authDomain: "yunki-shop.firebaseapp.com",
+    projectId: "yunki-shop",
+    storageBucket: "yunki-shop.appspot.com",
+    messagingSenderId: "513227691346",
+    appId: "1:513227691346:web:40221c3723648e37e1168b",
+    measurementId: "G-BER2STR8KR"
+  };

@@ -4,6 +4,7 @@ import './LogIn.css'
 import yunkiLogo from './public/icons/yunki-red.svg'
 
 function LogIn() {
+
   return (
     <div className='login__container'>
       <div className='login-contentHolder'>
@@ -16,7 +17,7 @@ function LogIn() {
           <input placeholder='Enter User Email.' type='email' required></input>
           <label>Password</label>
           <input placeholder='Enter User Password.' type='password' required></input>
-          <button className='login-button' type='confirm'>Log In</button>
+          <button className='login-button' type='submit'>Log In</button>
         </form>
         <div className='login-text'>
           <h3 className='password-reset'>forgot password?</h3>
