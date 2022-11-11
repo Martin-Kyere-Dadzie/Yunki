@@ -8,7 +8,9 @@ import Checkout from './components/Checkout';
 import WishList from './components/WishList';
 import SignIn from './components/SignIn';
 import LogIn from './components/LogIn';
-import { useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { auth, provider } from './firebase'
+// import * as firebase from 'firebase/app'
 
 function App() {
   // const bagItemList = useSelector((state) => state.bag.itemsList);

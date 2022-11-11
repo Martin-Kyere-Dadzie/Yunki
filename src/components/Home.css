@@ -168,6 +168,44 @@
     object-fit: cover;
   }
 
+  .slide .content{
+    position: absolute;
+    right: 19.6%;
+    bottom: 23%;
+    width: 30%;
+    animation: slide-up 1s ease .5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    /* border-bottom: 3px solid white; */
+    /* background-color: saddlebrown; */
+  }
+
+  @keyframes slide-up {
+    0%{
+      visibility: visible;
+      bottom: 23%;
+    }
+    100%{
+      visibility: visible;
+      bottom: 27%;
+    }
+  }
+
+  .slide .content > h2{
+    font-family: centuryGothicBold;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  .content > h2:hover{
+    color: var(--dark-gray);
+  }
+
+  .content > h2:active{
+    color: var(--nav-color);
+  }
+
   .slide img{
     width: 100%;
     height: 100%;

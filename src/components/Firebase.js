@@ -1,10 +1,17 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCaRXPvjOW4OfzuuXxtCZ8FwwG9ydw-1Nk",
-    authDomain: "yunki-shop.firebaseapp.com",
-    projectId: "yunki-shop",
-    storageBucket: "yunki-shop.appspot.com",
-    messagingSenderId: "513227691346",
-    appId: "1:513227691346:web:40221c3723648e37e1168b",
-    measurementId: "G-BER2STR8KR"
-  };
+  apiKey: "AIzaSyBtQKsnaoIsc0kyGq88Qjx6nnFOZG1h4Ys",
+  authDomain: "yunki-authentications.firebaseapp.com",
+  projectId: "yunki-authentications",
+  storageBucket: "yunki-authentications.appspot.com",
+  messagingSenderId: "13556052059",
+  appId: "1:13556052059:web:73f708f7a3d536393c0f7e"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);

@@ -70,7 +70,12 @@ return (
                     return (
                         <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
                             {index === currentSlide && (
-                                <img alt='' src={slide.Image}></img>
+                                <>
+                                    <img alt='' src={slide.Image}></img>
+                                    <div className='content'>
+                                        <h2>{slide.heading}</h2>
+                                    </div>
+                                </>
                             )}
                         </div>
                         )
