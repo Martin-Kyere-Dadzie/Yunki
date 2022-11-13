@@ -2,7 +2,7 @@
 import './SignIn.css';
 import yunkiRedLogo from './public/icons/yunki-red.svg';
 import { Link } from 'react-router-dom';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from './firebase';
 import { useState } from 'react';
 
@@ -10,11 +10,12 @@ function SignIn () {
 
     const auth = getAuth(app);
 
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const createAccount = () => {
-        signInWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, name, email, password)
           .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
@@ -26,9 +27,22 @@ function SignIn () {
             const errorCode = error.code;
             // const errorMessage = error.message;
             console.log(errorCode);
+            alert(errorCode);
           });     
     };
 
+
+    const signIn = () => {
+      signInWithEmailAndPassword(auth, name, email, password)
+      .then((userCredential) => {
+        // Sing in
+        const user = userCredential.user;
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      })
+    }
   return (
     <div className="Login__Section">
         <div className='Login__Contents'>
@@ -40,8 +54,8 @@ function SignIn () {
                 <h3>Sign in for Yunki to be the first to see inspiring content, news and exclusive offers.</h3>
             </div>
             <form className='Login__form' >
-                {/* <label>Name:</label>
-                <input type={'text'} placeholder='Enter User Name.' required onChange={(e) => setName(e.target.value)}></input> */}
+                <label>Name:</label>
+                <input type={'text'} placeholder='Enter User Name.' required onChange={(e) => setName(e.target.value)}></input>
                 <label>Email Address:</label>
                 <input type={'email'} placeholder='Enter User Email.' required onChange={(e) => setEmail(e.target.value)}></input>
                 <label>Password:</label>
