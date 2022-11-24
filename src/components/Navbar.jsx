@@ -8,6 +8,7 @@ import userwhite from '../components/public/icons/user-white.svg';
 import heartWhite from '../components/public/icons/heart-white.svg';
 import shoppingBagWhite from '../components/public/icons/bag-white.svg';
 import searchBlackIcon from '../components/public/icons/search-black.svg'
+import menuIcon from './public/icons/menu-icon.svg'
 import { Link } from 'react-router-dom';
 // import Home from './Home';
 // import FavProducts from './FavProducts';
@@ -22,7 +23,7 @@ function Navbar() {
   return (
     <div className='navbar__section'>
       <div className='blackLogo__container'>
-        <Link to="/">
+        <Link to="/" className='logo-link'>
           <img src={yunkiRedLogo} alt='Yunki-Logo'></img>
         </Link>
       </div>
@@ -61,6 +62,9 @@ function Navbar() {
             <strong>{ counter }</strong>
           </Link>
         </div>
+      </div>
+        <div className='nav__icon'>
+          <img alt='' src={menuIcon} className='menu__icon'></img>
       </div>
     </div>
   )

@@ -137,12 +137,13 @@
     text-align: center;
     font-family: centuryGothic;
     font-weight: bolder;
+    outline: none;
   }
 
   .navbar__section .navChildren__container {
     width: 12%;
     height: 100%;
-    margin: 0 50px 0 50px;
+    margin: 0 0px 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,10 +167,10 @@
   }
 
   .navChildren__container .nav__icon strong {
-    width: 15px;
-    height: 15px;
+    /* width: 15px;
+    height: 15px; */
     border-radius: 20px;
-    background-color: var(--yunki-color);
+    background-color: var(--nav-color);
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
@@ -181,7 +182,7 @@
   }
 
   .nav__icon img {
-    width: 37%;
+    width: 50%;
     cursor: pointer;
     /* background-color: blue; */
 
@@ -189,15 +190,75 @@
 
   
   .navChildren__container .user__icon{
-    width: 30%;
+    width: 44%;
     /* background-color: aqua; */
   }
 
-  .navChildren__container .bag__icon{
-    width: 27%;
+  .navChildren__container .mobile-column .bag__icon{
+    width: 55%;
+  }
+  .navChildren__container .mobile-column .heart__icon{
+    width: 70%;
   }
   
 
+.navbar__section .menu__icon{
+  display: none;
+  width: 60%;
+}
 
-  
-  
+
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .navbar__section{
+    height: 9vh;
+    width: 100vw;
+  }
+  .navbar__section .blackLogo__container{
+    /* background-color: lightblue; */
+    margin: 0px 10px;
+    width: 20%;
+  }
+  .navbar__section .nav__links{
+    display: none;
+  }
+  .navbar__section .search__container{
+    margin: 0px;
+    height: 44%;
+  }
+  .search__container .search__btn{
+    width: 30%;
+  }
+  .navbar__section .navChildren__container{
+    margin: 0px 10px 0px 0px;
+    width: 30%;
+    /* background-color: orangered; */
+  }
+  .navChildren__container .user__icon{
+    width: 45%;
+  }
+  .navChildren__container .heart__icon{
+    width: 55%;
+  }
+  .navChildren__container .bag__icon{
+    width: 45%;
+  }
+  .navbar__section .menu__icon{
+    display: block;
+    width: 5vw;
+    margin-right: 10px;
+  }
+}
+
+/* Small screen devices (600px and above) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium screen devices (768px and above) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Big screen devices (889px and above) */
+/* @media only screen and (min-width: 889px) {...} */
+
+/* Extra big screen devices (1200px and above) */
+/* @media only screen and (min-width: 1200px) {...} */

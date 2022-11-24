@@ -29,8 +29,7 @@ function SignIn () {
             console.log(errorCode);
             alert(errorCode);
           });     
-    };
-
+    }
 
     const signIn = () => {
       signInWithEmailAndPassword(auth, name, email, password)
