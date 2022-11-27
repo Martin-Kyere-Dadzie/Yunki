@@ -8,12 +8,12 @@
   }
 
   :root{
-    --nav-color: #0f0f0f;
+    --nav-color: #02E6D6;
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
     --darker-gray: #a4a4a4;
-   }
+    }
 
 .Footer__container {
     width: 100vw;

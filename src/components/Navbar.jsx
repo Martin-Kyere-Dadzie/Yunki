@@ -7,7 +7,8 @@ import yunkiWhiteLogo from './public/icons/yunki-white.svg';
 import userwhite from '../components/public/icons/user-white.svg';
 import heartWhite from '../components/public/icons/heart-white.svg';
 import shoppingBagWhite from '../components/public/icons/bag-white.svg';
-import searchBlackIcon from '../components/public/icons/search-black.svg'
+import deliveryIcon from './public/icons/delivery-icon.svg';
+import searchIcon from '../components/public/icons/search-icon.svg';
 import menuIcon from './public/icons/menu-icon.svg'
 import { Link } from 'react-router-dom';
 // import Home from './Home';
@@ -22,49 +23,61 @@ function Navbar() {
 
   return (
     <div className='navbar__section'>
-      <div className='blackLogo__container'>
-        <Link to="/" className='logo-link'>
-          <img src={yunkiRedLogo} alt='Yunki-Logo'></img>
-        </Link>
+        <div className='navIcons__container'>
+          <div className="leftIcon-holder side-icons">
+            <div className='nav__icon'>
+              <Link to='wishlist' className='visit__link'>    
+                <img alt='' src={heartWhite} className="heart__icon"></img>
+                <h4>wish list</h4>
+                <strong className='counter'>0</strong>
+              </Link>
+            </div>
+            <div className="line"></div>
+            <div className='nav__icon'>
+              <Link to='checkout' className='visit__link'>
+                <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
+                <h4>bag</h4>
+                <strong className='counter'>{ counter }</strong>
+              </Link>
+            </div>
+          </div>
+          <div className='yunkiLogo-container'>
+            <Link to="/" className='logo-link '>
+              <img src={yunkiWhiteLogo} alt='Yunki-Logo'></img>
+            </Link>
+          </div>
+          <div className="rightIcon-holder side-icons">           
+            <div className='nav__icon'>
+              <Link to='signin' className='visit__link'>
+                <img alt='' src={userwhite} className="user__icon"></img>
+                <span className='login'><h4>Martin</h4></span>
+              </Link>
+            </div>
+            <div className="line line-invisible"></div>
+            <div className='nav__icon' id='search-icon'> 
+              <Link to='wishlist' className='visit__link'>    
+                <img alt='' src={searchIcon} className="search-icon"></img>
+                <h4 className='search-text'>search</h4>
+                {/* <strong className='counter'>0</strong> */}
+              </Link>
+            </div>
+          </div>
       </div>
-      <div className='nav__links'>
-        <div className='link one'>
-          <h3 className='men__section'>men</h3>
-        </div>
-        <div className='link one'>
-          <h3 className='women__section'>women</h3>
-        </div>
-        <div className='link one'>
-          <h3 className='Kinds__section'>kids</h3>
-        </div>
-      </div>
-      <div className='search__container'>
-        <input type="search"></input>
-        <button className='search__btn'>
-          <img alt='' src={searchBlackIcon}></img>
-        </button>
-      </div>
-      <div className='navChildren__container'>
-        <div className='nav__icon'>
-          <Link to='signin' className='visit__link'>
-            <img alt='' src={userwhite} className="user__icon"></img>
-          </Link>
-        </div>
-        <div className='nav__icon'>
-          <Link to='wishlist' className='visit__link'>    
-            <img alt='' src={heartWhite} className="heart__icon"></img>
-            <strong></strong>
-          </Link>
-        </div>
-        <div className='nav__icon'> 
-          <Link to='checkout' className='visit__link'>
-            <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
-            <strong>{ counter }</strong>
-          </Link>
-        </div>
-      </div>
-        <div className='nav__icon'>
+        <div className='menu-display'>
           <img alt='' src={menuIcon} className='menu__icon'></img>
+        </div>
+
+      <div className="link-section">
+        <div className="link-container">
+          <ul>
+            <li>New Arrivals</li>
+            <li>Women</li>
+            <li>Food and Drinks</li>
+            <li>Kids</li>
+            <li>Men</li>
+            <li>Babies</li>
+          </ul>
+        </div>
       </div>
     </div>
   )

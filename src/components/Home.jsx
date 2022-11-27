@@ -12,11 +12,8 @@ import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 
 import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
 import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
 import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
-import cocopineCream from './public/images/cocpine curls cream and oil.png';
-import petLeash from './public/images/pet leash.png';
-import brownBelt from './public/images/brown-belt.png';
-import dosHambres from './public/images/dos hembres.png';
-import ShortcutLinks from './ShortcutLinks';
+import { Link } from 'react-router-dom';
+import deliveryIcon from './public/icons/delivery-icon.svg'
 
 function Home() {
 
@@ -58,7 +55,7 @@ return (
         <div className='Home__section'>
             <div className='text__container'>
                 <h1 className='tittle__text'>
-                    buy your products and get it delivered to you <span>today</span>.
+                    buy your products and get it delivered to you <span>today.</span>
                 </h1>
                 <h3 className='tittle__text'>
                     All tracked, controlled, and defined.
@@ -73,8 +70,11 @@ return (
                             {index === currentSlide && (
                                 <>
                                     <img alt='' src={slide.Image}></img>
+                                    <div className="banner-overlay">
                                     <div className='content'>
-                                        <h2>{slide.heading}</h2>
+                                        <h2 className='slide-text'>{slide.heading}</h2>
+                                    </div>
+
                                     </div>
                                 </>
                             )}
@@ -88,6 +88,12 @@ return (
                 <div className='angle__icon right__angle' onClick={nextSlide}>
                     <img alt='' src={rightAnglewhiteIcon} ></img>
                 </div>
+            </div>
+            <div className="nav__icon delivery-container">
+                <Link to='/wishlist' className='delivery__link'>
+                    <img alt='' src={deliveryIcon} className='delivery-icon'></img>
+                    <strong className='counter'>0</strong>
+                </Link>
             </div>
         </div>
         <div className='top__favorite'>
@@ -119,8 +125,6 @@ return (
                     <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
                     <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors={3} price={150} id={3}/>
                     <FavProducts image={brownBag} name="back pack" title="leather back pack" colors={3} price={320} id={4} />
-                    <FavProducts image={cocopineCream} name="cocopine cream and oil" title="cocopine curls cream and oil for hair and skin care" colors={1} price={52} id={5} />
-                    <FavProducts image={brownBelt} name="men's belt" title="Gentlemen brown belt for casual wears" colors={2} price={80} id={6} />
                 {/* <div className='topFav__container'>
                 </div>
 

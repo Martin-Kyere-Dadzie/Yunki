@@ -9,7 +9,7 @@ import mensFashion from './public/images/interview-2211354_1280.jpg';
 import sneaker from './public/images/sneaker.webp'
 import electronics from './public/images/altumcode-Ui3zMjpMrmM-unsplash.jpg';
 import bracelets from './public/images/37433_SILVV5.webp'
-import ladiesFasion from './public/images/piotr-szulawski-XjR-Y8PKeww-unsplash.jpg';
+import ladiesFasion from './public/images/pexels-stephen-audu-13155695.jpg';
 
 
 export const sliderData = [
