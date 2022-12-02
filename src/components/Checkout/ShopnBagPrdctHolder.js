@@ -1,12 +1,12 @@
 import React from 'react'
 import './ShopnBagPrdctHolder.css'
 // import heartBlack from './public/icons/heart.svg'
-import trashCan from './public/icons/trash.svg';
-import angleDown from './public/icons/angle-down.svg'
-import angleUp from './public/icons/angle-up.svg'
+import trashCan from '../public/icons/trash.svg';
+import angleDown from '../public/icons/angle-down.svg'
+import angleUp from '../public/icons/angle-up.svg'
 import { useDispatch } from 'react-redux';
-import {bagActions} from './redux/BagSlice';
-import cediIcon from './public/icons/cedi-icon.svg';
+import {bagActions} from '../Redux/BagSlice';
+import cediIcon from '../public/icons/cedi-icon.svg';
 
 function CheckoutHolder({image, name, title, colors, price, quantity, id }) {
 

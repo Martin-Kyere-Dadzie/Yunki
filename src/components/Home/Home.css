@@ -1,18 +1,18 @@
 @font-face {
     font-family: centuryGothic;
-    src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
+    src: url(../public/fonts/century-gothic/Century\ Gothic.ttf);
   }
   @font-face {
     font-family: centuryGothicBold;
-    src: url(../components/public/fonts/century-gothic/GOTHICB.TTF);
+    src: url(../public/fonts/century-gothic/GOTHICB.TTF);
   }
   @font-face {
     font-family: poppinsBold;
-    src: url(./public/fonts/poppins/Poppins-Black.ttf);
+    src: url(../public/fonts/poppins/Poppins-Black.ttf);
   }
   @font-face {
     font-family: poppinsMedium;
-    src: url(./public/fonts/poppins/Poppins-Medium.ttf);
+    src: url(../public/fonts/poppins/Poppins-Medium.ttf);
   }
 
   :root{
@@ -29,6 +29,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .Home__sreen{
@@ -109,12 +110,12 @@
 
   .banner__container .angle__icon{
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--nav-colors);
+    /* background-color: var(--nav-colors); */
     /* margin: 20px; */
     padding: 10px;
     border-radius: 50px;
@@ -132,7 +133,7 @@
   }
   
   .angle__icon img{
-    width: 100%;
+    width: 200%;
     height: 100%;
     /* background-color: saddlebrown; */
   }
@@ -433,6 +434,9 @@
     width: 37px;
     height: 37px;
   }
+  .angle__icon img{
+    width: 200%;
+  }
   .banner__container .right__angle{
     right: 30px;
   }
@@ -451,7 +455,7 @@
     /* background-color: rebeccapurple; */
   }
   .banner__image .content > h2{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .Home__section .delivery-container{
     width: 55px;

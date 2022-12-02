@@ -6,7 +6,15 @@
   font-family: centuryGothicBold;
   src: url(./components/public/fonts/century-gothic/Century\ Gothic.ttf);
 }
+@font-face {
+  font-family: poppinsMedium;
+  src: url(./components/public/fonts/poppins/Poppins-Medium.ttf);
+}
 
+*:focus{
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
 *{
-  font-family: centuryGothic;
+  font-family: poppinsMedium;
 }

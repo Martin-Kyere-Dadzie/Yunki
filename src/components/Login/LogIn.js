@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LogIn.css'
-import yunkiLogo from './public/icons/yunki-red.svg'
+import yunkiLogo from '../public/icons/yunki-red.svg'
 
 function LogIn() {
 

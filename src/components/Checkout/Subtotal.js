@@ -1,10 +1,10 @@
 import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
-import bagSlice from './redux/BagSlice';
+import bagSlice from '../Redux/BagSlice';
 import { useSelector } from 'react-redux';
-import itemsList from './redux/BagSlice';
-import cediIcon from './public/icons/cedi-icon.svg';
+import itemsList from '../Redux/BagSlice';
+import cediIcon from '../public/icons/cedi-icon.svg';
 
 function Subtotal() {
     let subtotalItemPrice = 0;

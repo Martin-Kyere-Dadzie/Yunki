@@ -4,8 +4,8 @@ import bagWhite from './public/icons/bag-white.svg'
 import heartRed from './public/icons/heart-white.svg'
 import heartRedFill from './public/icons/heart-red-fill.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { actions } from './redux'
-import { bagActions } from './redux/BagSlice';
+import { actions } from './Redux'
+import { bagActions } from './Redux/BagSlice';
 import cediIcon from './public/icons/cedi-icon.svg';
 // import store from './redux/index';
 

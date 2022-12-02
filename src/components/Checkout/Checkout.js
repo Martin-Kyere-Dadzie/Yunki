@@ -1,11 +1,11 @@
 import React from 'react'
 import './Checkout.css'
 import Subtotal from './Subtotal'
-import FavProducts from './FavProducts'
-import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
+import FavProducts from '../FavProducts'
+import swimCostume from '../public/images/626bb5a3c561673851fd842f_5 39302.png';
 import CheckoutHolder from './ShopnBagPrdctHolder';
 import { useDispatch, useSelector } from 'react-redux';
-import bagActions from './redux/BagSlice';
+import bagActions from '../Redux/BagSlice';
 
 
 function Checkout() {

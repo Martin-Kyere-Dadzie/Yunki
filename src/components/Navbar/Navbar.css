@@ -1,10 +1,10 @@
 @font-face {
     font-family: centuryGothic;
-    src: url(../components/public/fonts/century-gothic/Century\ Gothic.ttf);
+    src: url(../public/fonts/century-gothic/Century\ Gothic.ttf);
   }
   @font-face {
     font-family: centuryGothicBold;
-    src: url(../components/public/fonts/century-gothic/GOTHICB.TTF);
+    src: url(../public/fonts/century-gothic/GOTHICB.TTF);
   }
 
   :root{
@@ -23,6 +23,13 @@
     padding: 0px;
   }
 
+  .activeholder{
+    width: 100%;
+    height: 2%;
+    background-color: white;
+    display: block;
+    color: var(--yellow);
+  }
 
   .navbar__section{
     position: sticky;
@@ -178,11 +185,33 @@
     color: white;
     cursor: pointer;
   }
-  .link-container ul li:hover{
-    color: var(--yellow);
-    transition: 2s ease all;
+  .link-container ul li::after{
+    content: '';
+    height: 0px;
+    width: 0%;
+    background-color: white;
+    display: block;
+    transition: .6s ease-in-out;
   }
-  .navbar__section .menu-display{
+  .link-container ul li:hover::after{
+    content: '';
+    height: 1.5px;
+    width: 100%;
+    background-color: white;
+    display: block;
+  }
+  .link-container ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: poppinsMedium;
+  }
+  .link-container ul li a:hover{
+    color: var(--yellow);
+    transition: 1s ease all;
+  }
+  .navbar__section .mobile-menu-dropdown,
+  .navbar__section .menu-display,
+  .navbar__section .isopen-menu{
     display: none;
   }
 
@@ -190,11 +219,16 @@
 
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
-  .navbar__section .menu-display{
+  .navbar__section .link-section{
+    display: none;
+  }
+
+  .navbar__section .isopen-menu,
+  .close-btn{
     display: block;
     right: 20px;
     /* background-color: blue; */
-    width: 12%;
+    width: 10%;
     height: 100%;
     position: absolute;
     display: flex;
@@ -209,7 +243,123 @@
     justify-content: center;
     border-bottom: 3px solid var(--yellow);
   }
-  
+  .navbar__section .mobile-menu-dropdown{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7.5vh;
+    /* border-bottom: 3px solid var(--yellow); */
+    /* box-shadow: 0px 0px 9px 0px var(--yellow); */
+    /* right: 0; */
+    height: 49.2vh;
+    width: 100%;
+    /* background-color: var(--mint); */
+  }
+  .mobile-menu-dropdown .search-section{
+    position: absolute;
+    top: 0vh;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+    background-color: var(--mint);
+    /* background-color: red; */
+  }
+  .search-section .search-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+  }
+  .search-container .search-btn{
+    margin-bottom: 20px;
+    width: 15%;
+    height: 80%;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+  }
+  .search-btn img{
+    width: 100%;
+  }
+  .search-container input{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px;
+    background-color: white;
+  }
+  .search-container input:hover{
+    border: 1px solid var(--yellow);
+    box-shadow: 0px 0px 9px 0px var(--yellow);
+  }
+  .search-container input:hover input .search-btn{
+    border: 1px solid var(--yellow);
+    box-shadow: 0px 0px 9px 0px var(--yellow);
+  }
+  .search-container input::placeholder{
+    text-align: center;
+  }
+  .mobile-menu-dropdown ul{
+    background-color: var(--mint);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    border-bottom: 3px solid var(--yellow);
+    /* background-color: lime; */
+  }
+  .mobile-menu-dropdown ul li{
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 44.5px;
+    width: 100%;
+    /* background-color: var(--yellow); */
+  }
+  .mobile-menu-dropdown ul li a{
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    text-decoration: none;
+    font-family: poppinsMedium;
+    color: white;
+  }
+  .mobile-menu-dropdown ul li a:hover{
+    background-color: var(--yellow);
+  }
+  .mobile-menu-dropdown .overlay{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000009c;
+  }
   .navbar__section .navIcons__container .side-icons{
     /* background-color: navajowhite; */
     width: 25%;
@@ -249,12 +399,10 @@
     height: 16px;
     top: 16px;
   }
-  .navbar__section .link-section{
-    display: none;
-  }
   .navIcons__container .yunkiLogo-container{
     width: 45%;
   }
+
 }
 
 /* Small screen devices (600px and above) */

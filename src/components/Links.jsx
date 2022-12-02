@@ -1,0 +1,7 @@
+export { default as Home } from './Home/Home'
+export { default as Checkout } from './Checkout'
+export { default as FavProduct } from './FavProducts'
+export { default as Footer } from './Footer'
+export { default as Home } from './Home/Home'
+export { default as Home } from './Home/Home'
+export { default as Home } from './Home/Home'

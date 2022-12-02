@@ -1,19 +1,16 @@
-import '../components/Home.css'
-import leftAnglewhiteIcon from '../components/public/icons/left-angle-white.svg';
-import rightAnglewhiteIcon from '../components/public/icons/right-angle-white.svg';
-import leftAngleBlackIcon from '../components/public/icons/left-angle-black.svg';
-import rightAngleBlackIcon from '../components/public/icons/right-angle-black.svg';
+import './Home.css'
+import angleRight from '../public/icons/angle-right.svg';
+import angleLeft from '../public/icons/angle-left.svg';
 import { useState, useEffect } from 'react';
 import { sliderData } from './SliderData'
-import FavProducts from './FavProducts'
-import Filter from './Home/Filter/Filter';
-import Footer from './Footer';
-import swimCostume from '../components/public/images/626bb5a3c561673851fd842f_5 39302.png';
-import watch from '../components/public/images/626e635ba885cb03e3f03d5e_3-1.png';
-import sweatTop from '../components/public/images/626bc12adcace1adec523e95_4.png';
-import brownBag from '../components/public/images/6265151552d56e4117c09280_2.png';
+import FavProducts from '../FavProducts'
+import Filter from './Filter/Filter';
+import swimCostume from '../public/images/626bb5a3c561673851fd842f_5 39302.png';
+import watch from '../public/images/626e635ba885cb03e3f03d5e_3-1.png';
+import sweatTop from '../public/images/626bc12adcace1adec523e95_4.png';
+import brownBag from '../public/images/6265151552d56e4117c09280_2.png';
 import { Link } from 'react-router-dom';
-import deliveryIcon from './public/icons/delivery-icon.svg'
+import deliveryIcon from '../public/icons/delivery-icon.svg'
 
 function Home() {
 
@@ -83,10 +80,10 @@ return (
                     })}
                 </div>
                 <div className='angle__icon left__angle' onClick={prevSlide} >
-                    <img alt='' src={leftAnglewhiteIcon}></img>
+                    <img alt='' src={angleLeft}></img>
                 </div>
                 <div className='angle__icon right__angle' onClick={nextSlide}>
-                    <img alt='' src={rightAnglewhiteIcon} ></img>
+                    <img alt='' src={angleRight} ></img>
                 </div>
             </div>
             <div className="nav__icon delivery-container">
@@ -107,10 +104,10 @@ return (
                 </div>
                 <div className='fav__btns'>
                     <div className='fav__btn fav__prev' >
-                        <img alt='' src={leftAngleBlackIcon}></img>
+                        {/* <img alt='' src={leftAngleBlackIcon}></img> */}
                     </div>
                     <div className='fav__btn fav__prev' >
-                        <img alt='' src={rightAngleBlackIcon}></img>
+                        {/* <img alt='' src={rightAngleBlackIcon}></img> */}
                     </div>
                 </div>
             </div>
@@ -134,8 +131,6 @@ return (
                 </div> */}
             </div>            
         </div>
-
-        <Footer/>
     </div>
 )
 }
