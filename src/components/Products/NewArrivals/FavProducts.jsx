@@ -1,12 +1,12 @@
 import React from 'react'
 import './FavProducts.css'
-import bagWhite from './public/icons/bag-white.svg'
-import heartRed from './public/icons/heart-white.svg'
-import heartRedFill from './public/icons/heart-red-fill.svg'
+import bagWhite from '../../public/icons/bag-white.svg'
+import heartRed from '../../public/icons/heart-white.svg'
+import heartRedFill from '../../public/icons/heart-red-fill.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { actions } from './Redux'
-import { bagActions } from './Redux/BagSlice';
-import cediIcon from './public/icons/cedi-icon.svg';
+import { actions } from '../../Redux'
+import { bagActions } from '../../Redux/BagSlice';
+import cediIcon from '../../public/icons/cedi-icon.svg';
 // import store from './redux/index';
 
 function FavProducts({image, name, title, colors, price, id, }) {

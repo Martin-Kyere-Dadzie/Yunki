@@ -6,9 +6,9 @@ import Footer from './components/Footer/Footer'
 // import App from './App';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout/Checkout';
-import WishList from './components/WishList';
-import SignIn from './components/Login/SignIn'
-import LogIn from './components/Login/LogIn';
+import WishList from './components/WishList/WishList';
+import SignIn from './components/Auth/SignIn'
+import LogIn from './components/Auth/LogIn';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { auth, provider } from './firebase'
 // import * as firebase from 'firebase/app'

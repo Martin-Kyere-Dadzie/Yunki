@@ -2,8 +2,8 @@ import './Home.css'
 import angleRight from '../public/icons/angle-right.svg';
 import angleLeft from '../public/icons/angle-left.svg';
 import { useState, useEffect } from 'react';
-import { sliderData } from './SliderData'
-import FavProducts from '../FavProducts'
+import { sliderData } from '../Slides/SliderData'
+import FavProducts from '../Products/NewArrivals/FavProducts';
 import Filter from './Filter/Filter';
 import swimCostume from '../public/images/626bb5a3c561673851fd842f_5 39302.png';
 import watch from '../public/images/626e635ba885cb03e3f03d5e_3-1.png';

@@ -1,9 +1,9 @@
 // import React, { useState } from 'react';
-import './SignIn.css';
+import './SignIn';
 import yunkiRedLogo from '../public/icons/yunki-red.svg';
 import { Link } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import app from '../firebase';
+import app from '../Firebase/firebaseConfig';
 import { useState } from 'react';
 
 function SignIn () {

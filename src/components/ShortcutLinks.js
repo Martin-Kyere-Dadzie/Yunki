@@ -1,10 +1,10 @@
 import React from 'react'
 import './ShortcutLinks.css'
-import mensFashion from './public/images/beautiful-men-fashion-wooden-background.jpg';
-import sneaker from './public/images/sneaker.webp'
-import electronics from './public/images/NicePng_electronics-png_866175.png';
-import bracelets from './public/images/37433_SILVV5.webp'
-import ladiesFasion from './public/images/slim-lady-fashionable-trousers-blouse-red-hat-is-sitting-chair-stand-with-shiny-dresses.jpg';
+import mensFashion from '../public/images/beautiful-men-fashion-wooden-background.jpg';
+import sneaker from '../public/images/sneaker.webp'
+import electronics from '../public/images/NicePng_electronics-png_866175.png';
+import bracelets from '../public/images/37433_SILVV5.webp'
+import ladiesFasion from '../public/images/slim-lady-fashionable-trousers-blouse-red-hat-is-sitting-chair-stand-with-shiny-dresses.jpg';
 
 function ShortcutLinks() {
   return (
@@ -12,7 +12,7 @@ function ShortcutLinks() {
       <div className='first__row row'>
         <div className='first__holder image__one'>
           <div className='overlay'>
-            <h5>Bracelets</h5>
+            <h5>Braceletsy</h5>
           </div>
           <img alt='' src={bracelets}></img>
         </div>
