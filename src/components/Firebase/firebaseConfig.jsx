@@ -1,8 +1,9 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore";  
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyBtQKsnaoIsc0kyGq88Qjx6nnFOZG1h4Ys",
   authDomain: "yunki-authentications.firebaseapp.com",
@@ -12,7 +13,9 @@ const firebaseConfig = {
   appId: "1:13556052059:web:73f708f7a3d536393c0f7e"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
 
 export default app;

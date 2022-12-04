@@ -1,9 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './LogIn.css'
 import yunkiLogo from '../public/icons/yunki-red.svg'
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../Firebase/firebaseConfig';
+
 
 function LogIn() {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate
+
+  const loginUser = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      navigate('/')
+      alert('signed in successfully')
+    })
+    .catch((error) => {
+      alert(error.message)
+    });
+  }
+
 
   return (
     <div className='login__container'>
@@ -12,11 +33,19 @@ function LogIn() {
           <img className='yunki-logo' src={yunkiLogo} alt=''></img>
         </div>
         <h1 className='login-header'>Log in your account.</h1>
-        <form className='login-form'>
+        <form className='login-form' onSubmit={loginUser}>
           <label>Email Address:</label>
-          <input placeholder='Enter User Email.' type='email' required></input>
+          <input placeholder='Enter User Email.' 
+            type='email' 
+            required
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)}></input>
           <label>Password</label>
-          <input placeholder='Enter User Password.' type='password' required></input>
+          <input placeholder='Enter User Password.' 
+            type='password' 
+            required
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)}></input>
           <button className='login-button' type='submit'>Log In</button>
         </form>
         <div className='login-text'>

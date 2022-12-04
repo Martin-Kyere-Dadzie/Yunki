@@ -1,47 +1,36 @@
-// import React, { useState } from 'react';
-import './SignIn';
+import React from 'react';
+import './SignIn.css';
 import yunkiRedLogo from '../public/icons/yunki-red.svg';
-import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import app from '../Firebase/firebaseConfig';
+import { Link, useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from '../Firebase/firebaseConfig';
 import { useState } from 'react';
 
 function SignIn () {
-
-    const auth = getAuth(app);
-
-    const [name, setName] = useState('')
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [cPassword, setCPassword] = useState('');
 
-    const createAccount = () => {
-        createUserWithEmailAndPassword(auth, name, email, password)
-          .then((userCredential) => {
-            // Signed in 
+    const navigate = useNavigate()
+
+    const registerUser = (e) => {
+        e.preventDefault();
+        if(password !== cPassword) {
+            alert('password dont match')
+        }
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
             const user = userCredential.user;
             console.log(user);
-            alert('You successfully created your Yunki account');
-            // ...
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            // const errorMessage = error.message;
-            console.log(errorCode);
-            alert(errorCode);
-          });     
+            alert('successfully registered to yunki')
+            navigate('/')
+        })
+        .catch((error) => {
+            alert(error.message)
+        });
     }
 
-    const signIn = () => {
-      signInWithEmailAndPassword(auth, name, email, password)
-      .then((userCredential) => {
-        // Sing in
-        const user = userCredential.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      })
-    }
   return (
     <div className="Login__Section">
         <div className='Login__Contents'>
@@ -52,14 +41,26 @@ function SignIn () {
                 <h1>be the first to shop</h1>
                 <h3>Sign in for Yunki to be the first to see inspiring content, news and exclusive offers.</h3>
             </div>
-            <form className='Login__form' >
-                <label>Name:</label>
-                <input type={'text'} placeholder='Enter User Name.' required onChange={(e) => setName(e.target.value)}></input>
-                <label>Email Address:</label>
-                <input type={'email'} placeholder='Enter User Email.' required onChange={(e) => setEmail(e.target.value)}></input>
+            <form className='Login__form' onSubmit={registerUser} >
+                <label>Email:</label>
+                <input type={'email'} 
+                    placeholder='enter user email.' 
+                    required 
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)}></input>
                 <label>Password:</label>
-                <input type={'password'} placeholder='Enter User Password.' required onChange={(e) => setPassword(e.target.value)}></input>
-                <button onClick={createAccount} type='submit' className='form__btn'>create your yunki account</button>
+                <input type={'password'} 
+                    placeholder='enter user password.' 
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}></input>
+                <label>Confirm Password:</label>
+                <input type={'password'} 
+                    placeholder='confirm user password.' 
+                    required
+                    value={cPassword}
+                    onChange={(e) => setCPassword(e.target.value)}></input>
+                <button type='submit' className='form__btn'>create your yunki account</button>
             </form>
             <div className='user__login'>Already have an account? <span><Link to='/login' className='User__Account'>Log In</Link></span></div>
             <div className='login__footer'>
