@@ -110,8 +110,8 @@
 
   .banner__container .angle__icon{
     position: absolute;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,10 +140,13 @@
 
   .banner__container .left__angle{
     margin-left: 60px;
+    /* background-color: red; */
   }
 
   .banner__container .right__angle{
-    margin-left: 650px;
+    right: 130px;
+    /* right: 0px; */
+    /* background-color: rebeccapurple; */
   }
 
 
@@ -181,7 +184,7 @@
   }
   .banner__container .banner-overlay{
     position: absolute;
-    width: 49%;
+    width: 51.57%;
     height: 75%;
     display: flex;
     align-items: center;

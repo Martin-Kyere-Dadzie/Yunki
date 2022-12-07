@@ -52,7 +52,7 @@ function Footer() {
                                 <img alt='' src={locationIcon}></img>
                                 <h5>Address:</h5>
                             </div>
-                            <p>Tema comm20, lions loop L19, Accra-Ghana.</p>
+                            <p>Tema comm19, lions loop L19, Accra-Ghana.</p>
                         </div>
                         <div className='hr'></div>
                         <div className='phone-section main-icon'>

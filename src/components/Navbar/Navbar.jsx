@@ -29,6 +29,10 @@ function Navbar() {
   const openMenu = () => setIsOpen(!isOpen);
 
   
+  // search products
+  const search = ({value, changeInput})
+
+  
   return (
       <div className='navbar__section'>
         
@@ -94,7 +98,7 @@ function Navbar() {
           <div className="search-section">         
             <form className='search-container'>
               <input placeholder='' type='search'></input>
-              <button className='search-btn' type='confirm'><img alt='' src={searchIcon}></img></button>
+              <button className='search-btn' type='confirm' value={value} onChange={changeInput}><img alt='' src={searchIcon}></img></button>
             </form>    
           </div>
           <ul>
