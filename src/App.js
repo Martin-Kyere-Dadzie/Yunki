@@ -17,6 +17,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
+  // usestate hook for opening the mobile-menu-icon
   const [isOpen, setIsOpen] = useState(false);
   // const bagItemList = useSelector((state) => state.bag.itemsList);
   // console.log(bagItemList);

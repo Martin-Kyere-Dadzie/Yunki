@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import loggerMiddleware from './Middlewares/loginMiddleware';
+
 
 const bagSlice = createSlice({
     name: 'shoppingBag',
     initialState: {
         itemsList: [],
         totalQuantity: null,
-        showBag: false
+        showBag: false,
+        // store
     },
 
     reducers: {

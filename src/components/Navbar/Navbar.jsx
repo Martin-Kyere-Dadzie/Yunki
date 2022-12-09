@@ -18,7 +18,7 @@ import closeBtn from '../public/icons/close-btn.svg';
 
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import { style } from '@mui/system';
+// import { style } from '@mui/system';
 // import index from './redux/index';
 
 function Navbar() {
@@ -30,7 +30,7 @@ function Navbar() {
 
   
   // search products
-  const search = ({value, changeInput})
+  // const search = ({value, changeInput})
 
   
   return (
@@ -98,7 +98,7 @@ function Navbar() {
           <div className="search-section">         
             <form className='search-container'>
               <input placeholder='' type='search'></input>
-              <button className='search-btn' type='confirm' value={value} onChange={changeInput}><img alt='' src={searchIcon}></img></button>
+              <button className='search-btn' type='confirm'><img alt='' src={searchIcon}></img></button>
             </form>    
           </div>
           <ul>
