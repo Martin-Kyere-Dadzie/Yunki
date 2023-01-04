@@ -6,16 +6,22 @@
     font-family: centuryGothicBold;
     src: url(../public/fonts/century-gothic/GOTHICB.TTF);
   }
+  @font-face {
+    font-family: poppinsMedium;
+    src: url(../public/fonts/poppins/Poppins-Bold.ttf);
+  }
 
   :root{
-    --nav-color: #02E6D6;
+    --fab-color: #0B0E14;
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
     --darker-gray: #a4a4a4;
+    --yellow: #ffb700;
     }
 
   .checkoutHolder__container{
+    font-family: poppinsMedium;
     width: 22vw;
     height: 60vh;
     display: flex;
@@ -43,9 +49,9 @@
   }
 
   .checkoutHolder__imageIcon .itemIncrement__container{
-    width: 26px;
-    height: 50px;
-    border: 1px solid var(--nav-color);
+    width: 1.8%;
+    height: 7%;
+    border: 1px solid var(--fab-color);
     border-radius: 55px;
     display: flex;
     flex-direction: column;
@@ -54,7 +60,7 @@
     position: absolute;
     margin-bottom: 12%;
     margin-left: 12%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: centuryGothicBold;
     font-weight: bolder;
     background-color: white;
@@ -93,8 +99,8 @@
   }
 
   .checkoutHolder__textContainer > h3{
-    font-family: centuryGothicBold;
-    font-size: 1rem;
+    font-family: poppinsMedium;
+    font-size: 1.2rem;
   }
 
   .checkoutHolder__textContainer > h3 img{
@@ -105,15 +111,20 @@
 
   .checkoutHolder__textContainer > p{
     /* font-family: centuryGothic; */
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
-
+  .checkoutHolder__textContainer .color-selector{
+    width: 17%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
   .checkoutHolder__container .trashCan__section{
     width: 40%;
     height: 7%;
     border-radius: 50px;
     border: none;
-    background-color: var(--nav-color);
+    background-color: var(--fab-color);
     object-fit: contain;
     display: flex;
     align-items: center;
@@ -123,11 +134,11 @@
   }
   
   .trashCan__section h4{
-    font-size: .81rem;
+    font-size: 1.2rem;
   }
 
   .trashCan__section:hover{
-    background-color: var(--yunki-color);
+    background-color: var(--yellow);
     transition: .7s ease all;
   }
 

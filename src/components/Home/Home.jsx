@@ -11,6 +11,7 @@ import sweatTop from '../public/images/626bc12adcace1adec523e95_4.png';
 import brownBag from '../public/images/6265151552d56e4117c09280_2.png';
 import { Link } from 'react-router-dom';
 import deliveryIcon from '../public/icons/delivery-icon.svg'
+import List from './List/List';
 
 function Home() {
 
@@ -57,7 +58,23 @@ return (
                 <h3 className='tittle__text'>
                     All tracked, controlled, and defined.
                 </h3>
-                <button className='home__btn'>Shop</button>
+                <div className="btn-container">
+                    <button className='home__btn'>
+                        <Link to='/MenShop' className='shop-link'>
+                            <h6>Shop Men</h6>
+                        </Link>
+                    </button>
+                    <button className='home__btn'>
+                        <Link to='/MenShop' className='shop-link'>
+                            <h6>Shop Women</h6>
+                        </Link>
+                    </button>
+                    <button className='home__btn'>
+                        <Link to='/MenShop' className='shop-link'>
+                            <h6>Shop kids</h6>
+                        </Link>
+                    </button>
+                </div>
             </div>
             <div className='banner__container'>
                 <div className='banner__image'>
@@ -118,17 +135,9 @@ return (
                 <Filter />
             </div>
             <div className="product-display h-col">
-                    <FavProducts image={swimCostume} name="swimming costume" title="women swimming costume" colors={3} price={120} id={1} />
-                    <FavProducts image={watch} name="mens watch" title="mens's smart leather watch" colors={2} price={350} id={2} />
-                    <FavProducts image={sweatTop} name="sweat top" title="sweat top for both genders" colors={3} price={150} id={3}/>
-                    <FavProducts image={brownBag} name="back pack" title="leather back pack" colors={3} price={320} id={4} />
-                {/* <div className='topFav__container'>
-                </div>
-
-                <div className='topFav__container'>
-                    <FavProducts image={petLeash} name="pet leash" title="pet leash for pets" colors={1} price={85} id={7}/>
-                    <FavProducts image={dosHambres} name="dos hambres" title="dos hambres alcoholic beverage" colors={1} price={220} id={8} />
-                </div> */}
+                <FavProducts id='1' name='Back Pack' image={brownBag} price = {122} title='Brown leather back pack' />
+                <FavProducts id='2' name='Ladies Swim Suit' image={swimCostume} price={80} title='Swimming costume for ladies'/>
+                <FavProducts id='3' name='Wrist Watch' image={watch} price={250} title="Gentlemen's wrist watch for occasional wears"/>
             </div>            
         </div>
     </div>

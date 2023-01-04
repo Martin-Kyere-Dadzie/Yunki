@@ -1,9 +1,13 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 
-const loader = () => {
-  return (
-    <div>loader</div>
-  )
-}
 
-export default loader
+ export const [loader, setLoader] = useState(false);
+  useEffect(() => {
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false)
+    }, 3000);
+
+  }, []);
+

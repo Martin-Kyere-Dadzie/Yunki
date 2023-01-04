@@ -6,9 +6,17 @@
     font-family: centuryGothicBold;
     src: url(../../public/fonts/century-gothic/GOTHICB.TTF);
   }
+  @font-face {
+    font-family: poppinsMedium;
+    src: url(../../public/fonts/poppins/Poppins-Medium.ttf);
+  }
+  @font-face {
+    font-family: poppinsMedium;
+    src: url(../../public/fonts/poppins/Poppins-Bold.ttf);
+  }
 
   :root{
-    --fab-color: #02e6d6;
+    --fab-color: #0B0E14;
     --yunki-color: #F40802;
     --light-gray: #F7F7F7;
     --dark-gray: #d9d9d9;
@@ -44,8 +52,8 @@
   }
 
   .favproduct__imageIcon .heartIcon__container{
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -84,24 +92,39 @@
   }
 
   .favProduct__textContainer h3{
-    font-family: centuryGothicBold;
-    font-size: 1rem;
+    font-family: poppinsMedium;
+    font-size: 1.2rem;
   }
   .favProduct__textContainer p{
     /* font-family: centuryGothic; */
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
-
+  .favProduct__textContainer .color-selector{
+    /* background-color: red; */
+    width: 17%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .color-selector h5{
+    font-size: 1rem;
+  }
+  .color-selector .main-color{
+    width: 20px;
+    height: 20px;
+    background: #634134;
+  }
   .favProduct__container .product__price > img{
     position: relative;
-    top: 1px;
-    width: 2.7%;
+    top: 9px;
+    width: 3.5%;
+    margin: 5px;
     /* background-color: darkblue; */
   }
 
   .favProduct__container .addToBag__section{
     width: 95%;
-    height: 8%;
+    height: 9%;
     border: none;
     background-color: var(--fab-color);
     object-fit: contain;
@@ -109,33 +132,13 @@
     align-items: center;
     justify-content: space-evenly;
     color: white;
-    font-size: .65rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    display: none;
+    opacity: 0;
   }
-  .addToBag__section::before,
-  .addToBag__section::after{
-    content: '';
-    position: relative;
-    inset: 0;
-    background-color: var(--fab-color);
-    transition: 0.5s;
-    width: 200%;
-    height: 100%;
-  }
-  .addToBag__section:hover::before{
-    inset: -5%;
-    z-index: -2;
-    width: 100%;
-  }
-  .addToBag__section:hover::after{
-    z-index: -2;
-    inset: 05%;
-    filter: blur(5px);
-  }
-
   .favProduct__container:hover .addToBag__section{
     display: flex; 
+    opacity: 1;
   }
 
   .addToBag__section:hover{
@@ -144,7 +147,7 @@
   }
 
   .addToBag__section:active{
-    background-color: var(--nav-color);
+    background-color: var(--fab-color);
   }
 
   .addToBag__section h4{
@@ -152,7 +155,7 @@
   }
 
   .addToBag__section img{
-    width: 5%;
+    width: 15%;
     margin-right: 25%;
     /* background-color: #0f0f0f; */
   }

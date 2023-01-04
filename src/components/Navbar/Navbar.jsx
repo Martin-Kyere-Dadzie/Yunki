@@ -6,11 +6,11 @@ import yunkiRedLogo from '../public/icons/yunki-red.svg';
 import yunkiWhiteLogo from '../public/icons/yunki-white.svg';
 import userwhite from '../public/icons/user-white.svg';
 import heartWhite from '../public/icons/heart-white.svg';
-import shoppingBagWhite from '../public/icons/bag-white.svg';
+import shoppingBagWhite from '../public/icons/shopping-bag.svg';
 import deliveryIcon from '../public/icons/delivery-icon.svg';
 import searchIcon from '../public/icons/search-icon.svg';
 import menuIcon from '../public/icons/menu-icon.svg'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import navLinks from './NavLinks';
 import closeBtn from '../public/icons/close-btn.svg';
 // import Home from './Home';
@@ -41,40 +41,40 @@ function Navbar() {
           <div className='navIcons__container'>
             <div className="leftIcon-holder side-icons">
               <div className='nav__icon'>
-                <Link to='wishlist' className='visit__link' onClick={closeMenu}>    
+                <NavLink to='wishlist' className='visit__link' onClick={closeMenu}>    
                   <img alt='' src={heartWhite} className="heart__icon"></img>
                   <h4>wish list</h4>
                   <strong className='counter'>0</strong>
-                </Link>
+                </NavLink>
               </div>
               <div className="line"></div>
               <div className='nav__icon'>
-                <Link to='checkout' className='visit__link' onClick={closeMenu}>
+                <NavLink to='checkout' className='visit__link' onClick={closeMenu}>
                   <img alt='' src={shoppingBagWhite} className="bag__icon"></img>
                   <h4>bag</h4>
                   <strong className='counter'>{ counter }</strong>
-                </Link>
+                </NavLink>
               </div>
             </div>
             <div className='yunkiLogo-container'>
-              <Link to="/" className='logo-link ' onClick={closeMenu}>
+              <NavLink to="/" className='logo-link ' onClick={closeMenu}>
                 <img src={yunkiWhiteLogo} alt='Yunki-Logo'></img>
-              </Link>
+              </NavLink>
             </div>
             <div className="rightIcon-holder side-icons">           
               <div className='nav__icon'>
-                <Link to='signin' className='visit__link' onClick={closeMenu}>
+                <NavLink to='signin' className='visit__link' onClick={closeMenu}>
                   <img alt='' src={userwhite} className="user__icon"></img>
                   <span className='login'><h4>Martin</h4></span>
-                </Link>
+                </NavLink>
               </div>
               <div className="line line-invisible"></div>
               <div className='nav__icon' id='search-icon'> 
-                <Link to='wishlist' className='visit__link' onClick={closeMenu}>    
+                <NavLink to='wishlist' className='visit__link' onClick={closeMenu}>    
                   <img alt='' src={searchIcon} className="search-icon"></img>
                   <h4 className='search-text'>search</h4>
                   {/* <strong className='counter'>0</strong> */}
-                </Link>
+                </NavLink>
               </div>
             </div>
         </div>

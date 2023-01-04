@@ -1,20 +1,29 @@
-/* @font-face {
-    font-family: centuryGothic;
-    src: url(../public/fonts/century-gothic/Century\ Gothic.ttf);
-  }
-  @font-face {
-    font-family: centuryGothicBold;
-    src: url(../public/fonts/century-gothic/);
-  } */
+@font-face {
+  font-family: centuryGothic;
+  src: url(../public/fonts/century-gothic/Century\ Gothic.ttf);
+}
+@font-face {
+  font-family: centuryGothicBold;
+  src: url(../public/fonts/century-gothic/GOTHICB.TTF);
+}
+@font-face {
+  font-family: poppinsBold;
+  src: url(../public/fonts/poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(../public/fonts/poppins/Poppins-Medium.ttf);
+}
 
-  :root{
-    --nav-color: #0f0f0f;
-    --yunki-color: #F40802;
-    --light-gray: #F7F7F7;
-    --dark-gray: #d9d9d9;
-    --login-link: #5c72ff;
-    --darker-gray: #a4a4a4;
-   }
+:root{
+  --nav-colors: #0B0E14;
+  --nav-black: #0f0f0f;
+  --yunki-color: #F40802;
+  --light-gray: #F7F7F7;
+  --dark-gray: #d9d9d9;
+  --darker-gray: #a4a4a4;
+  --yellow: #ffb700;
+  }
 
    .login__container{
     display: flex;
@@ -31,8 +40,8 @@
     justify-content: space-between;
     height: 55%;
     width: 23%;
-    background-color: var(--nav-color);
-    border: 1px solid black;
+    background-color: var(--nav-colors);
+    /* border: 1px solid black; */
    }
    .login-contentHolder .login-nav{
     display: flex;
@@ -43,7 +52,7 @@
     /* background-color: teal; */
    }
    .login-nav img{
-    width: 28%;
+    width: 50%;
    }
    .login-contentHolder h1{
     font-size: 1.5rem;
@@ -79,27 +88,47 @@
     /* background-color: greenyellow; */
    }
    .login-text .password-reset{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bolder;
-    font-family: centuryGothicBold;
+    font-family: poppinsBold;
     color: var(--login-link);
     cursor: pointer;
+    color: white;
     /* font-family: centuryGothicBold; */
    }
    .password-reset:hover{
-    color: var(--yunki-color);
+    color: var(--yellow);
+    transition: 1s ease all;
    }
    .login-text > h2{
-    font-size: 1rem;
-    font-family: centuryGothicBold;
+    font-size: 1.2rem;
+    font-family: poppinsMedium;
     color: white;
    }
    .login-text .signin-link{
     font-weight: bolder;
-    color: var(--login-link);
+    color: var(--yellow);
     cursor: pointer;
     text-decoration: none;
+    font-family: poppinsBold;
    }
    .signin-link:hover{
-    color: var(--yunki-color);
+    color: var(--yellow);
+   }
+
+
+      
+   @media only screen and (max-width: 595px) {
+    .login__container .login-contentHolder{
+      width: 80%;
+    }
+    .login-contentHolder h1{
+      font-size: 1rem;
+    }
+    .login-text .password-reset{
+      font-size: .8rem;
+    }
+    .login-text h2{
+      font-size: .8rem;
+    }
    }

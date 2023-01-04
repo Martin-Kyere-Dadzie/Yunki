@@ -47,7 +47,10 @@ return (
         <div className='checkoutHolder__textContainer'>
             <h3 className='checkoutProduct__name'>{name}</h3>
             <p className='checkoutProduct__description'>{title}</p>
-            <h5 className='checkoutProduct__color'>colors: {colors}</h5>
+            <div className="color-selector">
+                <h5 className='product__color'>colors: {colors}</h5>
+                <div className="main-color"></div>
+            </div>
             <h3 className='checkoutProduct__price'>
                 <img alt='' src={cediIcon}></img>{price} GHS
             </h3>

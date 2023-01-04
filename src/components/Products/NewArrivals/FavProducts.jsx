@@ -1,7 +1,7 @@
 import React from 'react'
 import './FavProducts.css'
-import bagWhite from '../../public/icons/bag-white.svg'
-import heartRed from '../../public/icons/heart-white.svg'
+import bagWhite from '../../public/icons/shopping-bag.svg'
+import heartWhite from '../../public/icons/wish-heart.svg';
 // import heartRedFill from '../../public/icons/heart-red-fill.svg'
 import { useDispatch } from 'react-redux';
 // import { actions } from '../../Redux'
@@ -28,13 +28,16 @@ return (
         <div className='favproduct__imageIcon'>
             <img alt='product-img' src={image} className="product"></img>
             <div className='heartIcon__container'>
-                <img alt='icon-img' src={heartRed} className='heart__icon'></img>
+                <img alt='icon-img' src={heartWhite} className='heart__icon'></img>
             </div>
         </div>
         <div className='favProduct__textContainer'>
             <h3 className='product__name'>{name}</h3>
             <p className='product__description'>{title}</p>
-            <h5 className='product__color'>colors: {colors}</h5>
+            <div className="color-selector">
+                <h5 className='product__color'>colors: {colors}</h5>
+                <div className="main-color"></div>
+            </div>
             <h3 className='product__price'>
                 <img alt='icon-img' src={cediIcon}></img>{price} GHS
             </h3>

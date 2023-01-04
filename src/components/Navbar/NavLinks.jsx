@@ -1,26 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import { NavLink } from "react-router-dom"
+
 
 const navLinks = [
     {
         name: 'New Arrivals',
-        route: '/newArrivals'
+        route: '/newArrivals',
+        to: '/newArrivals'
     },
     {
-        name: 'Women',
-        route: '/women'
+        name: 'Home & Kitchens',
+        route: '/HomeAndKitchens',
+        to: '/HomeAndKitchens'
     },
     {
-        name: 'Food and Drinks',
-        route: '/foodAndDrinks'
+        name: 'Office & Security',
+        route: '/OfficeAndSecurity',
+        to: '/OfficeAndSecurity'
     },
     {
-        name: 'Kids',
-        route: '/kids'
+        name: 'Beauty & Personal Care',
+        route: '/BeautyAndPersonalCare',
+        to: '/BeautyAndPersonalCare'
     },
     {
-        name: 'Men',
-        route: '/men'
+        name: 'Pet Supplies',
+        route: '/PetSupplies',
+        to: '/PetSupplies'
     },
     {
         name: 'Babies',

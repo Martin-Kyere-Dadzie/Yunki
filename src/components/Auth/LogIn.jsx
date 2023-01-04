@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './LogIn.css'
-import yunkiLogo from '../public/icons/yunki-red.svg'
+import yunkiLogo from '../public/icons/yunki-white.svg'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../Firebase/firebaseConfig';
 
@@ -16,13 +16,14 @@ function LogIn() {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // const user = userCredential.user;
-      navigate('/')
-      alert('signed in successfully')
-    })
-    .catch((error) => {
-      alert(error.message)
-    });
+      navigate('/home')
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    alert(error.message)
+  });
   }
 
 

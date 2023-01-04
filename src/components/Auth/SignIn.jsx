@@ -1,10 +1,11 @@
 import React from 'react';
 import './SignIn.css';
-import yunkiRedLogo from '../public/icons/yunki-red.svg';
+import yunkiRedLogo from '../public/icons/yunki-white.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../Firebase/firebaseConfig';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -60,7 +61,7 @@ const SignIn = () => {
                     required
                     value={cPassword}
                     onChange={(e) => setCPassword(e.target.value)}></input>
-                <button type='submit' className='form__btn'>create your yunki account</button>
+                <button type='submit' className='form__btn'>create yunki account</button>
             </form>
             <div className='user__login'>Already have an account? <span><Link to='/login' className='User__Account'>Log In</Link></span></div>
             <div className='login__footer'>
